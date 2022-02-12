@@ -54,3 +54,52 @@ function getMiddle(s) {
 </details>
 
 ---
+
+<details><summary><b>Day 1</b></summary>
+
+#### Categorize New Member
+
+> 7 kyu
+
+###### Description:
+
+> The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed. To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+
+```javascript
+function openOrSenior(data) {
+  // ...
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function openOrSenior(data) {
+  let newArray = [];
+
+  for (var i = 0; i < data.length; i++) {
+    if (data[i][0] >= 55 && data[i][1] > 7) {
+      newArray.push("Senior");
+    } else {
+      newArray.push("Open");
+    }
+  }
+  return newArray;
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer</b></summary>
+
+```javascript
+function openOrSenior(data) {
+  return data.map(([age, handicap]) => (age > 54 && handicap > 7 ? "Senior" : "Open"));
+}
+```
+
+</details>
+
+</details>
+
+---
