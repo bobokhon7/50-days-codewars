@@ -108,3 +108,55 @@ function openOrSenior(data) {
 </details>
 
 ---
+
+---
+
+<details><summary><b>Day 2</b></summary>
+
+#### Reversed sequence
+
+>8 kyu
+
+###### Description:
+
+> Build a function that returns an array of integers from n to 1 where n>0.
+
+>Example : n=5 --> [5,4,3,2,1]
+
+```javascript
+const reverseSeq = n => {
+  return [];
+};
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+const reverseSeq = n => {
+    let newVal = [];
+
+    for(let i=1; i<=n; i++){
+        newVal.push(i)
+    }
+    return newVal.reverse()
+};
+```
+
+</details>
+
+<details><summary><b>Best Answer</b></summary>
+
+```javascript
+const reverseSeq = n => {
+    const newArray = [];
+    for( let i = n; i>0; i--){
+    newArray.push(i)};
+    return  newArray;
+  };
+```
+
+</details>
+
+</details>
+
+---
