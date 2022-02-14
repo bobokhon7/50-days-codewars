@@ -109,8 +109,6 @@ function openOrSenior(data) {
 
 ---
 
----
-
 <details><summary><b>Day 2</b></summary>
 
 #### Reversed sequence
