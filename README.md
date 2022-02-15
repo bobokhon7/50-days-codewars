@@ -215,3 +215,53 @@ function century(year) {
 </details>
 
 ---
+
+<details><summary><b>Day 4</b></summary>
+
+#### Grasshopper - Summation
+
+>8 kyu
+
+###### Description:
+
+> Introduction
+>Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+>Examples
+>summation(8) -> 36
+>1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+
+```javascript
+var summation = function (num) {
+ ///
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+var summation = function (num) {
+  let total = 0
+  for(let i=1; i<=num; i++){
+   total += i
+  }
+  return total
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer</b></summary>
+
+```javascript
+var summation = function (num) {
+  return num * (num+1) / 2;
+}
+```
+
+</details>
+
+</details>
+
+---
+
