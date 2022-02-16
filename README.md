@@ -265,3 +265,58 @@ var summation = function (num) {
 
 ---
 
+<details><summary><b>Day 5</b></summary>
+
+#### Descending Order
+
+>7 kyu
+
+###### Description:
+
+> Introduction
+>Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+>Examples
+>Input: 42145 Output: 54421
+>Input: 123456789 Output: 987654321
+
+```javascript
+function descendingOrder(n){
+  ///
+  }
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function descendingOrder(n){
+    let reverseNum =  n.toString().split('').sort().reverse()
+   return Number(reverseNum.join(''))
+  }
+```
+
+</details>
+
+<details><summary><b>Best Answer 1</b></summary>
+
+```javascript
+function descendingOrder(n){
+  return parseInt(String(n).split('').sort().reverse().join(''))
+}
+```
+
+<details><summary><b>Best Answer 2</b></summary>
+
+```javascript
+function descendingOrder(n){
+  return parseInt(n.toString().split('').sort(function(a, b){
+    return b - a;
+  }).join(''));
+}
+```
+
+</details>
+
+</details>
+
+---
