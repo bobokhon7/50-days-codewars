@@ -329,8 +329,6 @@ function descendingOrder(n) {
 
 ---
 
----
-
 <details><summary><b>Day 6</b></summary>
 
 #### Basic Mathematical Operations
