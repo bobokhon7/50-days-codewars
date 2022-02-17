@@ -113,16 +113,16 @@ function openOrSenior(data) {
 
 #### Reversed sequence
 
->8 kyu
+> 8 kyu
 
 ###### Description:
 
 > Build a function that returns an array of integers from n to 1 where n>0.
 
->Example : n=5 --> [5,4,3,2,1]
+> Example : n=5 --> [5,4,3,2,1]
 
 ```javascript
-const reverseSeq = n => {
+const reverseSeq = (n) => {
   return [];
 };
 ```
@@ -130,13 +130,13 @@ const reverseSeq = n => {
 <details><summary><b>My Answer</b></summary>
 
 ```javascript
-const reverseSeq = n => {
-    let newVal = [];
+const reverseSeq = (n) => {
+  let newVal = [];
 
-    for(let i=1; i<=n; i++){
-        newVal.push(i)
-    }
-    return newVal.reverse()
+  for (let i = 1; i <= n; i++) {
+    newVal.push(i);
+  }
+  return newVal.reverse();
 };
 ```
 
@@ -145,12 +145,13 @@ const reverseSeq = n => {
 <details><summary><b>Best Answer</b></summary>
 
 ```javascript
-const reverseSeq = n => {
-    const newArray = [];
-    for( let i = n; i>0; i--){
-    newArray.push(i)};
-    return  newArray;
-  };
+const reverseSeq = (n) => {
+  const newArray = [];
+  for (let i = n; i > 0; i--) {
+    newArray.push(i);
+  }
+  return newArray;
+};
 ```
 
 </details>
@@ -158,25 +159,26 @@ const reverseSeq = n => {
 </details>
 
 ---
+
 <details><summary><b>Day 3</b></summary>
 
 #### Century From Year
 
->8 kyu
+> 8 kyu
 
 ###### Description:
 
 > Introduction
->The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 >up to and including the year 200, etc.
+> The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 >up to and including the year 200, etc.
 
->Task
->Given a year, return the century it is in.
+> Task
+> Given a year, return the century it is in.
 
->Examples
->1705 --> 18
->1900 --> 19
->1601 --> 17
->2000 --> 20
+> Examples
+> 1705 --> 18
+> 1900 --> 19
+> 1601 --> 17
+> 2000 --> 20
 
 ```javascript
 function century(year) {
@@ -189,15 +191,15 @@ function century(year) {
 
 ```javascript
 function century(year) {
-    let century = 0;
+  let century = 0;
 
-    for(let i = 0; i < year; i++) {
-      if(i % 100 == 0) {
-        century++;
-      }
+  for (let i = 0; i < year; i++) {
+    if (i % 100 == 0) {
+      century++;
     }
-    return century;
   }
+  return century;
+}
 ```
 
 </details>
@@ -206,8 +208,8 @@ function century(year) {
 
 ```javascript
 function century(year) {
-    return Math.ceil((year)/100)
-  }
+  return Math.ceil(year / 100);
+}
 ```
 
 </details>
@@ -220,33 +222,33 @@ function century(year) {
 
 #### Grasshopper - Summation
 
->8 kyu
+> 8 kyu
 
 ###### Description:
 
 > Introduction
->Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+> Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
 
->Examples
->summation(8) -> 36
->1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+> Examples
+> summation(8) -> 36
+> 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
 
 ```javascript
 var summation = function (num) {
- ///
-}
+  ///
+};
 ```
 
 <details><summary><b>My Answer</b></summary>
 
 ```javascript
 var summation = function (num) {
-  let total = 0
-  for(let i=1; i<=num; i++){
-   total += i
+  let total = 0;
+  for (let i = 1; i <= num; i++) {
+    total += i;
   }
-  return total
-}
+  return total;
+};
 ```
 
 </details>
@@ -255,8 +257,8 @@ var summation = function (num) {
 
 ```javascript
 var summation = function (num) {
-  return num * (num+1) / 2;
-}
+  return (num * (num + 1)) / 2;
+};
 ```
 
 </details>
@@ -269,30 +271,30 @@ var summation = function (num) {
 
 #### Descending Order
 
->7 kyu
+> 7 kyu
 
 ###### Description:
 
 > Introduction
->Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+> Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
 
->Examples
->Input: 42145 Output: 54421
->Input: 123456789 Output: 987654321
+> Examples
+> Input: 42145 Output: 54421
+> Input: 123456789 Output: 987654321
 
 ```javascript
-function descendingOrder(n){
+function descendingOrder(n) {
   ///
-  }
+}
 ```
 
 <details><summary><b>My Answer</b></summary>
 
 ```javascript
-function descendingOrder(n){
-    let reverseNum =  n.toString().split('').sort().reverse()
-   return Number(reverseNum.join(''))
-  }
+function descendingOrder(n) {
+  let reverseNum = n.toString().split("").sort().reverse();
+  return Number(reverseNum.join(""));
+}
 ```
 
 </details>
@@ -300,22 +302,95 @@ function descendingOrder(n){
 <details><summary><b>Best Answer 1</b></summary>
 
 ```javascript
-function descendingOrder(n){
-  return parseInt(String(n).split('').sort().reverse().join(''))
+function descendingOrder(n) {
+  return parseInt(String(n).split("").sort().reverse().join(""));
 }
 ```
 
 <details><summary><b>Best Answer 2</b></summary>
 
 ```javascript
-function descendingOrder(n){
-  return parseInt(n.toString().split('').sort(function(a, b){
-    return b - a;
-  }).join(''));
+function descendingOrder(n) {
+  return parseInt(
+    n
+      .toString()
+      .split("")
+      .sort(function (a, b) {
+        return b - a;
+      })
+      .join("")
+  );
 }
 ```
 
 </details>
+
+</details>
+
+---
+
+<details><summary><b>Day 6</b></summary>
+
+#### Basic Mathematical Operations
+
+> 8 kyu
+
+###### Description:
+
+> Introduction
+> Your task is to create a function that does four basic mathematical operations.
+> The function should take three arguments - operation(string/char), value1(number), value2(number).
+> The function should return result of numbers after applying the chosen operation.
+
+> Examples
+> ('+', 4, 7) --> 11
+> ('-', 15, 18) --> -3
+> ('\*', 5, 5) --> 25
+> ('/', 49, 7) --> 7
+
+```javascript
+function basicOp(operation, value1, value2) {
+  // Code
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function basicOp(operation, value1, value2) {
+  // Code
+  if (operation === "+") {
+    return value1 + value2;
+  } else if (operation === "-") {
+    return value1 - value2;
+  } else if (operation === "*") {
+    return value1 * value2;
+  } else if (operation === "/") {
+    return value1 / value2;
+  }
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer 1</b></summary>
+
+```javascript
+function basicOp(operation, value1, value2) {
+  switch (operation) {
+    case "+":
+      return value1 + value2;
+    case "-":
+      return value1 - value2;
+    case "*":
+      return value1 * value2;
+    case "/":
+      return value1 / value2;
+    default:
+      return 0;
+  }
+}
+```
 
 </details>
 
