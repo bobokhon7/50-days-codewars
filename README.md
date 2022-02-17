@@ -345,7 +345,7 @@ function descendingOrder(n) {
 > Examples
 > ('+', 4, 7) --> 11
 > ('-', 15, 18) --> -3
-> ('\*', 5, 5) --> 25
+> ('\', 5, 5) --> 25
 > ('/', 49, 7) --> 7
 
 ```javascript
@@ -373,7 +373,7 @@ function basicOp(operation, value1, value2) {
 
 </details>
 
-<details><summary><b>Best Answer 1</b></summary>
+<details><summary><b>Best Answer</b></summary>
 
 ```javascript
 function basicOp(operation, value1, value2) {
@@ -393,6 +393,7 @@ function basicOp(operation, value1, value2) {
 ```
 
 </details>
+
 </details>
 
 ---
