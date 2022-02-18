@@ -45,8 +45,15 @@
 // console.log(basicOp("+", 4, 7));
 
 
-function hero(bullets, dragons){
-  return dragons * 2 > bullets ? false : true
-  }
+// function hero(bullets, dragons){
+//   return dragons * 2 > bullets ? false : true
+//   }
 
-  console.log(hero(10,5))
+//   console.log(hero(10,5))
+
+
+function squareDigits(num){
+  let numArr = num.toString().split('').map((a) => a*a).join('')
+  return numArr
+}
+console.log(squareDigits(9119))
