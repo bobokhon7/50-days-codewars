@@ -378,3 +378,45 @@ function basicOp(operation, value1, value2) {
 </details>
 
 ---
+
+<details><summary><b>Day 7</b></summary>
+
+#### Is he gonna survive?
+
+> 8 kyu
+###### Description:
+
+> Introduction
+> A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+
+```javascript
+function hero(bullets, dragons){
+//Get Coding!
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+
+function hero(bullets, dragons){
+  return dragons * 2 > bullets ? false : true
+  }
+```
+
+</details>
+
+<details><summary><b>Best Answer</b></summary>
+
+```javascript
+function hero(bullets, dragons){
+  return bullets >= dragons * 2
+}
+```
+
+</details>
+
+</details>
+
+---
+

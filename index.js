@@ -30,16 +30,23 @@
 //   ])
 // );
 
-function basicOp(operation, value1, value2) {
-  // Code
-  if (operation === "+") {
-    return value1 + value2;
-  } else if (operation === "-") {
-    return value1 - value2;
-  } else if (operation === "*") {
-    return value1 * value2;
-  } else if (operation === "/") {
-    return value1 / value2;
+// function basicOp(operation, value1, value2) {
+//   // Code
+//   if (operation === "+") {
+//     return value1 + value2;
+//   } else if (operation === "-") {
+//     return value1 - value2;
+//   } else if (operation === "*") {
+//     return value1 * value2;
+//   } else if (operation === "/") {
+//     return value1 / value2;
+//   }
+// }
+// console.log(basicOp("+", 4, 7));
+
+
+function hero(bullets, dragons){
+  return dragons * 2 > bullets ? false : true
   }
-}
-console.log(basicOp("+", 4, 7));
+
+  console.log(hero(10,5))
