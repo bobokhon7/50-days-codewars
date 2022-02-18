@@ -167,6 +167,7 @@ const reverseSeq = (n) => {
 > 1900 --> 19
 > 1601 --> 17
 > 2000 --> 20
+
 ```javascript
 function century(year) {
   // Finish this :)
@@ -252,9 +253,9 @@ var summation = function (num) {
 
 <details><summary><b>Day 5</b></summary>
 
-#### Descending Order
 
 > 7 kyu
+#### Descending Order
 ###### Description:
 
 > Introduction
@@ -262,6 +263,7 @@ var summation = function (num) {
 > Examples
 > Input: 42145 Output: 54421
 > Input: 123456789 Output: 987654321
+
 ```javascript
 function descendingOrder(n) {
   ///
@@ -306,8 +308,8 @@ function descendingOrder(n) {
 </details>
 
 </details>
+</details>
 
----
 
 ---
 
