@@ -54,6 +54,6 @@
 
 function squareDigits(num){
   let numArr = num.toString().split('').map((a) => a*a).join('')
-  return numArr
+  return Number(numArr)
 }
 console.log(squareDigits(9119))

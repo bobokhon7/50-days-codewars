@@ -379,7 +379,7 @@ function basicOp(operation, value1, value2) {
 
 ---
 
-<details><summary><b>Day 7</b></summary>
+<details><summary><b>Day 7(1)</b></summary>
 
 #### Is he gonna survive?
 
@@ -420,7 +420,7 @@ function hero(bullets, dragons){
 
 ---
 
-<details><summary><b>Day 7</b></summary>
+<details><summary><b>Day 7(2)</b></summary>
 
 #### Square Every Digit
 
