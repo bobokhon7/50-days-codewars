@@ -44,17 +44,28 @@
 // }
 // console.log(basicOp("+", 4, 7));
 
-function find_average(array) {
-  let average = 0;
+// function find_average(array) {
+//   let average = 0;
 
-  for (let i = 0; i < array.length; i++) {
-    average += array[i];
+//   for (let i = 0; i < array.length; i++) {
+//     average += array[i];
+//   }
+//   if (array.length === 0) {
+//     return average;
+//   } else {
+//     return average / array.length;
+//   }
+// }
+
+// console.log(find_average([]));
+
+function grow(x) {
+  let total = 1;
+
+  for (let i = 0; i < x.length; i++) {
+    total *= x[i];
   }
-  if (array.length === 0) {
-    return average;
-  } else {
-    return average / array.length;
-  }
+  return total;
 }
 
-console.log(find_average([]));
+console.log(grow([1, 2, 3]));

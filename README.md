@@ -538,3 +538,51 @@ function find_average(arr) {
 </details>
 
 ---
+
+<details><summary><b>Day 8 (2)</b></summary>
+
+####Beginner - Reduce but Grow
+
+> 8 kyu
+
+###### Description:
+
+> Introduction
+> Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+
+```javascript
+[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+```
+
+```javascript
+function grow(x) {
+  // your code here
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function grow(x) {
+  let total = 1;
+
+  for (let i = 0; i < x.length; i++) {
+    total *= x[i];
+  }
+  return total;
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer</b></summary>
+
+```javascript
+const grow = (x) => x.reduce((a, b) => a * b);
+```
+
+</details>
+
+</details>
+
+---
