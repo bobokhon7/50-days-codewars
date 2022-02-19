@@ -59,13 +59,20 @@
 
 // console.log(find_average([]));
 
-function grow(x) {
-  let total = 1;
+// function grow(x) {
+//   let total = 1;
 
-  for (let i = 0; i < x.length; i++) {
-    total *= x[i];
-  }
-  return total;
+//   for (let i = 0; i < x.length; i++) {
+//     total *= x[i];
+//   }
+//   return total;
+// }
+
+// console.log(grow([1, 2, 3]));
+
+function findUniq(arr) {
+  arr.sort((a, b) => a - b);
+  return arr[0] == arr[1] ? arr.pop() : arr[0];
 }
 
-console.log(grow([1, 2, 3]));
+console.log(findUniq([2, 2, 3, 2, 3]));

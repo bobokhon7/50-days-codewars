@@ -586,3 +586,51 @@ const grow = (x) => x.reduce((a, b) => a * b);
 </details>
 
 ---
+
+<details><summary><b>Day 8 (3)</b></summary>
+
+####Find the unique number
+
+> 6 kyu
+
+###### Description:
+
+> Introduction
+> There is an array with some numbers. All numbers are equal except for one. Try to find it!:
+
+```javascript
+findUniq([1, 1, 1, 2, 1, 1]) === 2;
+findUniq([0, 0, 0.55, 0, 0]) === 0.55;
+```
+
+```javascript
+function findUniq(arr) {
+  // do magic
+}
+```
+
+<details><summary><b>My Answer 😂</b></summary>
+
+```javascript
+function findUniq(arr) {
+  arr.sort((a, b) => a - b);
+  return arr[0] == arr[1] ? arr.pop() : arr[0];
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer ✔</b></summary>
+
+```javascript
+function findUniq(arr) {
+  arr.sort((a, b) => a - b);
+  return arr[0] == arr[1] ? arr.pop() : arr[0];
+}
+```
+
+</details>
+
+</details>
+
+---
