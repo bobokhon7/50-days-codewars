@@ -20,9 +20,11 @@ Btw, feel free to reach out to me! 🌐 <br />
 #### Get the Middle Character?
 
 > 7 kyu
+
 ###### Description:
 
 > You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
 ```javascript
 function getMiddle(s) {
   //Code goes here!
@@ -58,6 +60,7 @@ function getMiddle(s) {
 #### Categorize New Member
 
 > 7 kyu
+
 ###### Description:
 
 > The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed. To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
@@ -66,6 +69,7 @@ function getMiddle(s) {
 > Example
 > input = [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
 > output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+
 ```javascript
 function openOrSenior(data) {
   // ...
@@ -109,10 +113,12 @@ function openOrSenior(data) {
 #### Reversed sequence
 
 > 8 kyu
+
 ###### Description:
 
 > Build a function that returns an array of integers from n to 1 where n>0.
 > Example : n=5 --> [5,4,3,2,1]
+
 ```javascript
 const reverseSeq = (n) => {
   return [];
@@ -156,6 +162,7 @@ const reverseSeq = (n) => {
 #### Century From Year
 
 > 8 kyu
+
 ###### Description:
 
 > Introduction
@@ -210,6 +217,7 @@ function century(year) {
 #### Grasshopper - Summation
 
 > 8 kyu
+
 ###### Description:
 
 > Introduction
@@ -217,6 +225,7 @@ function century(year) {
 > Examples
 > summation(8) -> 36
 > 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+
 ```javascript
 var summation = function (num) {
   ///
@@ -253,9 +262,10 @@ var summation = function (num) {
 
 <details><summary><b>Day 5</b></summary>
 
-
 > 7 kyu
+
 #### Descending Order
+
 ###### Description:
 
 > Introduction
@@ -310,7 +320,6 @@ function descendingOrder(n) {
 </details>
 </details>
 
-
 ---
 
 <details><summary><b>Day 6</b></summary>
@@ -318,6 +327,7 @@ function descendingOrder(n) {
 #### Basic Mathematical Operations
 
 > 8 kyu
+
 ###### Description:
 
 > Introduction
@@ -329,6 +339,7 @@ function descendingOrder(n) {
 > ('-', 15, 18) --> -3
 > ('\', 5, 5) --> 25
 > ('/', 49, 7) --> 7
+
 ```javascript
 function basicOp(operation, value1, value2) {
   // Code
@@ -384,24 +395,24 @@ function basicOp(operation, value1, value2) {
 #### Is he gonna survive?
 
 > 8 kyu
+
 ###### Description:
 
 > Introduction
 > A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
 
 ```javascript
-function hero(bullets, dragons){
-//Get Coding!
+function hero(bullets, dragons) {
+  //Get Coding!
 }
 ```
 
 <details><summary><b>My Answer</b></summary>
 
 ```javascript
-
-function hero(bullets, dragons){
-  return dragons * 2 > bullets ? false : true
-  }
+function hero(bullets, dragons) {
+  return dragons * 2 > bullets ? false : true;
+}
 ```
 
 </details>
@@ -409,8 +420,8 @@ function hero(bullets, dragons){
 <details><summary><b>Best Answer</b></summary>
 
 ```javascript
-function hero(bullets, dragons){
-  return bullets >= dragons * 2
+function hero(bullets, dragons) {
+  return bullets >= dragons * 2;
 }
 ```
 
@@ -425,17 +436,18 @@ function hero(bullets, dragons){
 #### Square Every Digit
 
 > 7 kyu
+
 ###### Description:
 
 > Introduction
 > Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
 
->For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+> For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
 
->Note: The function accepts an integer and returns an integer
+> Note: The function accepts an integer and returns an integer
 
 ```javascript
-function squareDigits(num){
+function squareDigits(num) {
   return 0;
 }
 ```
@@ -443,10 +455,13 @@ function squareDigits(num){
 <details><summary><b>My Answer</b></summary>
 
 ```javascript
-
-function squareDigits(num){
-  let numArr = num.toString().split('').map((a) => a*a).join('')
-  return Number(numArr)
+function squareDigits(num) {
+  let numArr = num
+    .toString()
+    .split("")
+    .map((a) => a * a)
+    .join("");
+  return Number(numArr);
 }
 ```
 
@@ -455,9 +470,13 @@ function squareDigits(num){
 <details><summary><b>Best Answer</b></summary>
 
 ```javascript
-function squareDigits(num){
-  let numArr = num.toString().split('').map((a) => a*a).join('')
-  return Number(numArr)
+function squareDigits(num) {
+  let numArr = num
+    .toString()
+    .split("")
+    .map((a) => a * a)
+    .join("");
+  return Number(numArr);
 }
 ```
 
@@ -467,3 +486,55 @@ function squareDigits(num){
 
 ---
 
+<details><summary><b>Day 8 (1)</b></summary>
+
+#### Square Every Digit
+
+> 8 kyu
+
+###### Description:
+
+> Introduction
+> Write a function which calculates the average of the numbers in a given list.
+
+> Note: Empty arrays should return 0.
+
+```javascript
+function find_average(array) {
+  // your code here
+  return 0;
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function find_average(array) {
+  let average = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    average += array[i];
+  }
+  if (array.length === 0) {
+    return average;
+  } else {
+    return average / array.length;
+  }
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer</b></summary>
+
+```javascript
+function find_average(arr) {
+  return arr.length > 0 ? arr.reduce((a, b) => a + b) / arr.length : 0;
+}
+```
+
+</details>
+
+</details>
+
+---

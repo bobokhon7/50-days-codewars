@@ -44,16 +44,17 @@
 // }
 // console.log(basicOp("+", 4, 7));
 
+function find_average(array) {
+  let average = 0;
 
-// function hero(bullets, dragons){
-//   return dragons * 2 > bullets ? false : true
-//   }
-
-//   console.log(hero(10,5))
-
-
-function squareDigits(num){
-  let numArr = num.toString().split('').map((a) => a*a).join('')
-  return Number(numArr)
+  for (let i = 0; i < array.length; i++) {
+    average += array[i];
+  }
+  if (array.length === 0) {
+    return average;
+  } else {
+    return average / array.length;
+  }
 }
-console.log(squareDigits(9119))
+
+console.log(find_average([]));
