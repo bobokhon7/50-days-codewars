@@ -87,3 +87,18 @@
 //   return sum % 2 === 0 ? "even" : "odd";
 // }
 // console.log(oddOrEven([1, 2, 2]));
+
+function wave(str) {
+  let newArr = [];
+  for (let i = 0; i < str.length; i++) {
+    let copy = str.split("");
+    // if (copy[i] !== " ") {
+    //   copy[i] = copy[i].toUpperCase();
+    //   newArr.push(copy.join(""));
+    // }
+    console.log(copy[0].toUpperCase().join(""));
+  }
+  return newArr;
+}
+
+console.log(wave("hello"));
