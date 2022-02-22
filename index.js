@@ -88,17 +88,62 @@
 // }
 // console.log(oddOrEven([1, 2, 2]));
 
-function wave(str) {
-  let newArr = [];
-  for (let i = 0; i < str.length; i++) {
-    let copy = str.split("");
-    // if (copy[i] !== " ") {
-    //   copy[i] = copy[i].toUpperCase();
-    //   newArr.push(copy.join(""));
+// function wave(str) {
+//   let newArr = [];
+//   for (let i = 0; i < str.length; i++) {
+//     let copy = str.split("");
+//     if (copy[i] !== " ") {
+//       copy[i] = copy[i].toUpperCase();
+//       newArr.push(copy.join(""));
+//     }
+//   }
+//   return newArr;
+// }
+
+// console.log(wave("hello"));
+
+// Sum Numbers
+// function sum(numbers) {
+//   "use strict";
+//   return numbers === 0 ? 0 : numbers.reduce((a, b) => a + b);
+// }
+
+// console.log(sum([1, 5.2, 4, 0, -1]));
+
+// function towerBuilder(nFloors) {
+//   return nFloors;
+// }
+// console.log(towerBuilder(3));
+
+// function getSum(a, b) {
+//   let sum = 0;
+
+//   if (a === b) {
+//     return a;
+//   } else if (a > b) {
+//     for (let i = b; i <= a; i++) {
+//       sum += i;
+//     }
+//   } else if (a < b) {
+//     for (let i = a; i <= b; i++) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// }
+
+// console.log(getSum(1, 0));
+
+function findOdd(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    const count = arr.filter((value) => value === arr[i]).length;
+    // if (count % 2 == 1) {
+    //   return arr[i];
     // }
-    console.log(copy[0].toUpperCase().join(""));
+    // console.log(count);
+    return count;
   }
-  return newArr;
+  // return -1;
 }
 
-console.log(wave("hello"));
+console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));

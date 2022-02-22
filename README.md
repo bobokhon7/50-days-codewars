@@ -761,3 +761,63 @@ function wave(str) {
 </details>
 
 ---
+
+<details><summary><b>Day 11 (1)</b></summary>
+
+#### Beginner Series #3 Sum of Numbers
+
+> 7 kyu
+
+###### Description:
+
+> Introduction
+> Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b
+
+```javascript
+(1, 0) --> 1 (1 + 0 = 1)
+(1, 2) --> 3 (1 + 2 = 3)
+(0, 1) --> 1 (0 + 1 = 1)
+(1, 1) --> 1 (1 since both are same)
+(-1, 0) --> -1 (-1 + 0 = -1)
+(-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
+```
+
+```javascript
+function getSum(a, b) {
+  // Code here
+}
+```
+
+<details><summary><b>My Answer </b></summary>
+
+```javascript
+function wave(str) {
+  let newArr = [];
+  for (let i = 0; i < str.length; i++) {
+    let copy = str.split("");
+    if (copy[i] !== " ") {
+      copy[i] = copy[i].toUpperCase();
+      newArr.push(copy.join(""));
+    }
+  }
+  return newArr;
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function GetSum(a, b) {
+  if (a == b) return a;
+  else if (a < b) return a + GetSum(a + 1, b);
+  else return a + GetSum(a - 1, b);
+}
+```
+
+</details>
+
+</details>
+
+---
