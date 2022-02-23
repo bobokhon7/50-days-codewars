@@ -134,16 +134,70 @@
 
 // console.log(getSum(1, 0));
 
-function findOdd(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    const count = arr.filter((value) => value === arr[i]).length;
-    // if (count % 2 == 1) {
-    //   return arr[i];
-    // }
-    // console.log(count);
-    return count;
-  }
-  // return -1;
-}
+/////////////////////////////
+//Find the Oddd number from array
+////////////////////////////
+// function findOdd(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     const count = arr.filter((value) => value === arr[i]).length;
+//     // if (count % 2 == 1) {
+//     //   return arr[i];
+//     // }
+//     // console.log(count);
+//     return count;
+//   }
+//   // return -1;
+// }
 
-console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
+// console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
+
+// const stray = (nums) => nums.reduce((a, b) => a ^ b);
+// console.log(stray([3, 17, 17]));
+
+// let a = 4;
+// let b = 5;
+// console.log(a ^ b);
+// function even_or_odd(number) {
+//   if (number % 2 === 0) {
+//     return "Even";
+//   } else {
+//     return "Odd";
+//   }
+// }
+
+// console.log(even_or_odd(2));
+
+// function remove(s) {
+//   return s.split("!").join("").concat("!");
+// }
+// console.log(remove("Hello World!"));
+
+// const areaOrPerimeter = function (a, b) {
+//   if (a === b) {
+//     return a * b;
+//   } else {
+//     return a + a + b + b;
+//   }
+// };
+
+// console.log(areaOrPerimeter(3, 3));
+
+// function likes(names) {
+//   let newStr = "";
+
+//   if (names.length === 0) {
+//     return "no one likes this";
+//   } else if (names.length === 1) {
+//     newStr = `${names[0]} likes this}`;
+//   } else if (names.length === 2) {
+//     newStr = `${names[0]} and ${names[1]} likes this`;
+//   } else if (names.length === 3) {
+//     newStr = `${names[0]}, ${names[1]} and ${names[2]} likes this`;
+//   } else if (names.length >= 4) {
+//     newStr = `${names[0]}, ${names[1]} and ${names.length - 2} others likes this`;
+//   }
+
+//   return newStr;
+// }
+
+// console.log(likes(["Peter", "Tony", "Dam", "Dam"]));
