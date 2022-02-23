@@ -201,3 +201,33 @@
 // }
 
 // console.log(likes(["Peter", "Tony", "Dam", "Dam"]));
+// function createPhoneNumber(numbers) {
+//   let newStr = `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`;
+//   return newStr;
+// }
+
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+// function updateLight(current) {
+//   if (current === "red") {
+//     return "green";
+//   } else if (current === "green") {
+//     return "yellow";
+//   } else {
+//     return "red";
+//   }
+// }
+
+// console.log(updateLight("green"));
+
+function arrayDiff(a, b) {
+  let newStr = `a was []`;
+  let val = [];
+  if (a.length === 0 || b.length === 0) {
+    val.push(a);
+    val.push(b);
+  }
+  return val;
+}
+
+console.log(arrayDiff([4, 5], []));
