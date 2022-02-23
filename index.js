@@ -134,16 +134,62 @@
 
 // console.log(getSum(1, 0));
 
-function findOdd(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    const count = arr.filter((value) => value === arr[i]).length;
-    // if (count % 2 == 1) {
-    //   return arr[i];
-    // }
-    // console.log(count);
-    return count;
-  }
-  // return -1;
-}
+// function findOdd(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     const count = arr.filter((value) => value === arr[i]).length;
+//     // if (count % 2 == 1) {
+//     //   return arr[i];
+//     // }
+//     // console.log(count);
+//     return count;
+//   }
+//   // return -1;
+// }
 
-console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
+// console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
+
+
+// function setAlarm(employed, vacation){
+// if(employed ===true && vacation === false){
+//   return true
+// }else{
+//   return false
+// }
+// }
+
+// console.log(setAlarm(false,false));
+
+// function getDivisorsCnt(n){
+//   // todo
+//   let arr = [];
+//   let newArr = []
+//   for(let i=1; i<=n;  i++){
+//     arr.push(i)
+//   }
+//    arr.filter((a) => {
+//     if(n%a===0){
+//       newArr.push(a)
+//     }
+//   })
+//   return newArr.length
+// }
+
+// console.log(getDivisorsCnt(5))
+
+
+// function noSpace(x){
+// let newStr = x.split(' ').join('')
+// return newStr
+// }
+
+// console.log(noSpace('wfwufy wiufgwif uwfgiw;oad ufwu'))
+
+// function lovefunc(flower1, flower2){
+//   if(flower1% 2 !== 0 && flower2 % 2 === 0){
+//     return true
+//   }else{
+//     return false
+//   }
+// }
+
+// console.log(lovefunc(0,0))
