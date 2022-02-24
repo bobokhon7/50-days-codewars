@@ -220,14 +220,40 @@
 
 // console.log(updateLight("green"));
 
-function arrayDiff(a, b) {
-  let newStr = `a was []`;
-  let val = [];
-  if (a.length === 0 || b.length === 0) {
-    val.push(a);
-    val.push(b);
-  }
-  return val;
-}
+// function isTriangle(a, b, c) {
+//   if (a + b < c || b + c < a || c + a < b) {
+//     return false;
+//   } else {
+//     if (a <= 0 || b <= 0 || c <= 0) {
+//       return false;
+//     } else {
+//       return true;
+//     }
+//   }
+// }
 
-console.log(arrayDiff([4, 5], []));
+// console.log(isTriangle(7, 2, 2));
+
+// function findNextSquare(sq) {
+//   var root1;
+//   var nextroot;
+//   if (Math.sqrt(sq) % 1 === 0) {
+//     root1 = Math.sqrt(sq);
+//     nextroot = root1 + 1;
+//   } else {
+//     return -1;
+//   }
+//   return nextroot * nextroot;
+// }
+
+// console.log(findNextSquare(114));
+
+// function sortArray(array) {
+//   let newArr = [];
+//   for (let i = 0; i < array.length; i++) {
+//     let take = array[i].reduce((a,b))
+
+//   }
+// }
+
+// console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]));

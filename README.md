@@ -897,3 +897,71 @@ function likes(names) {
 </details>
 
 ---
+
+<details><summary><b>Day 13</b></summary>
+
+#### Who likes it?
+
+> 6 kyu
+
+###### Description:
+
+> Introduction
+> Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('\_').
+
+```javascript
+* 'abc' =>  ['ab', 'c_']
+* 'abcdef' => ['ab', 'cd', 'ef']
+```
+
+```javascript
+function solution(str) {}
+```
+
+<details><summary><b>My Answer🤔 </b></summary>
+
+```javascript
+function solution(str) {
+  let arr = [];
+  let newStr = "";
+  if (str.length % 2 != 0) {
+    str += "_";
+  }
+  for (let i = 0; i < str.length; i++) {
+    newStr += str[i];
+    if (newStr.length === 2) {
+      arr.push(newStr);
+      newStr = "";
+    }
+  }
+  return arr;
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function solution(str) {
+  let arr = [];
+  let newStr = "";
+  if (str.length % 2 != 0) {
+    str += "_";
+  }
+  for (let i = 0; i < str.length; i++) {
+    newStr += str[i];
+    if (newStr.length === 2) {
+      arr.push(newStr);
+      newStr = "";
+    }
+  }
+  return arr;
+}
+```
+
+</details>
+
+</details>
+
+---
