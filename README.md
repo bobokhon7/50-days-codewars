@@ -965,3 +965,52 @@ function solution(str) {
 </details>
 
 ---
+
+<details><summary><b>Day 14</b></summary>
+
+#### Shortest Word
+
+> 7 kyu
+
+###### Description:
+
+> Introduction
+> Simple, given a string of words, return the length of the shortest word(s).
+
+> String will never be empty and you do not need to account for different data types.
+
+```javascript
+function findShort(s) {}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function findShort(s) {
+  let arr = s.split(" ");
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(arr[i].length);
+  }
+  return newArr.sort((a, b) => a - b)[0];
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function findShort(s) {
+  return Math.min.apply(
+    null,
+    s.split(" ").map((w) => w.length)
+  );
+}
+```
+
+</details>
+
+</details>
+
+---

@@ -257,3 +257,31 @@
 // }
 
 // console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]));
+
+// function countBy(x, n) {
+//   let z = [];
+//   let newVal = x * n;
+
+//   for (let i = x; i <= newVal; i += x) {
+//     z.push(i);
+//   }
+
+//   return z;
+// }
+
+// console.log(countBy(2, 5));
+// function findShort(s) {
+//   let arr = s.split(" ");
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     newArr.push(arr[i].length);
+//   }
+//   return newArr.sort((a, b) => a - b)[0];
+// }
+
+// console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
+
+// return masked string
+function maskify(cc) {}
+
+console.log(maskify("12347879797097979"));
