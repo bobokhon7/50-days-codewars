@@ -1014,3 +1014,54 @@ function findShort(s) {
 </details>
 
 ---
+
+<details><summary><b>Day 15</b></summary>
+
+#### If you can't sleep, just count sheep!!
+
+> 7 kyu
+
+###### Description:
+
+> Introduction
+> Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
+
+```javascript
+var countSheep = function (num) {
+  //your code here
+};
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+var countSheep = function (num) {
+  let newArr = [];
+
+  for (let i = 1; i <= num; i++) {
+    newArr.push(i + " sheep...");
+  }
+
+  return newArr.join("");
+};
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+var countSheep = function (num) {
+  let str = "";
+  for (let i = 1; i <= num; i++) {
+    str += `${i} sheep...`;
+  }
+  return str;
+};
+```
+
+</details>
+
+</details>
+
+---

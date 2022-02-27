@@ -282,6 +282,53 @@
 // console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
 
 // return masked string
-function maskify(cc) {}
+// function maskify(cc) {}
 
-console.log(maskify("12347879797097979"));
+// console.log(maskify("12347879797097979"));
+
+// function getAge(inputString) {
+//   // return correct age (int). Happy coding :)
+
+//   let newVal = inputString.split(" ");
+//   return Number(newVal[0]);
+// }
+
+// console.log(getAge("1 year old"));
+// function removeChar(str) {
+//   let newValue = str.split("");
+//   newValue.shift();
+//   newValue.pop();
+//   return newValue.join("");
+// }
+
+// console.log(removeChar("eloquent"));
+
+// function index(array, n) {
+//   if (array.length - 1 < n) {
+//     return -1;
+//   } else {
+//     let newArr = array[n];
+//     return Math.pow(newArr, n);
+//   }
+// }
+
+// console.log(index([1, 2, 3, 4], 4));
+
+// function isPangram(string) {
+//   let newValue = string.fromCharCode(65);
+//   return newValue;
+// }
+
+// console.log(isPangram("The quick brown fox jumps over the lazy dog."));
+
+// var countSheep = function (num) {
+//   let newArr = [];
+
+//   for (let i = 1; i <= num; i++) {
+//     newArr.push(i + " sheep...");
+//   }
+
+//   return newArr.join("");
+// };
+
+// console.log(countSheep(3));
