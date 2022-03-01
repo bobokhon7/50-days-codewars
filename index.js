@@ -339,20 +339,34 @@
 
 // console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
 
-var number = function (busStops) {
-  let newArray = [];
+// var number = function (busStops) {
+//   let newArray = [];
 
-  for (let i = 0; i < busStops.length; i++) {
-    let calculate = busStops[i][0] - busStops[i][1];
-    newArray.push(calculate);
-  }
-  return newArray.reduce((a, b) => a + b);
-};
+//   for (let i = 0; i < busStops.length; i++) {
+//     let calculate = busStops[i][0] - busStops[i][1];
+//     newArray.push(calculate);
+//   }
+//   return newArray.reduce((a, b) => a + b);
+// };
 
-console.log(
-  number([
-    [10, 0],
-    [3, 5],
-    [5, 8],
-  ])
-);
+// console.log(
+//   number([
+//     [10, 0],
+//     [3, 5],
+//     [5, 8],
+//   ])
+// );
+
+// function divisors(integer) {
+//   let newValue = [];
+
+//   for (let i = 2; i < integer; i++) {
+//     if (integer % i === 0) {
+//       newValue.push(i);
+//     }
+//   }
+
+//   return newValue.length === 0 ? `${integer} is prime` : newValue;
+// }
+
+// console.log(divisors(15));
