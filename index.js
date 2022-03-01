@@ -332,9 +332,27 @@
 // };
 
 // console.log(countSheep(3));
-function sumTwoSmallestNumbers(numbers) {
-  let newArr = numbers.sort((a, b) => a - b);
-  return newArr[0] + newArr[1];
-}
+// function sumTwoSmallestNumbers(numbers) {
+//   let newArr = numbers.sort((a, b) => a - b);
+//   return newArr[0] + newArr[1];
+// }
 
-console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
+// console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
+
+var number = function (busStops) {
+  let newArray = [];
+
+  for (let i = 0; i < busStops.length; i++) {
+    let calculate = busStops[i][0] - busStops[i][1];
+    newArray.push(calculate);
+  }
+  return newArray.reduce((a, b) => a + b);
+};
+
+console.log(
+  number([
+    [10, 0],
+    [3, 5],
+    [5, 8],
+  ])
+);
