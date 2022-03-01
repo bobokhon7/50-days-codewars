@@ -1065,3 +1065,52 @@ var countSheep = function (num) {
 </details>
 
 ---
+
+<details><summary><b>Day 16</b></summary>
+
+#### Sum of two lowest positive integers
+
+> 7 kyu
+
+###### Description:
+
+> Introduction
+> Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+
+```javascript
+[10, 343445353, 3453445, 3453545353453] should return 3453455
+```
+
+```javascript
+function sumTwoSmallestNumbers(numbers) {
+  //code
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function sumTwoSmallestNumbers(numbers) {
+  let newArr = numbers.sort((a, b) => a - b);
+  return newArr[0] + newArr[1];
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function sumTwoSmallestNumbers(numbers) {
+  numbers = numbers.sort(function (a, b) {
+    return a - b;
+  });
+  return numbers[0] + numbers[1];
+}
+```
+
+</details>
+
+</details>
+
+---
