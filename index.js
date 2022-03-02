@@ -384,3 +384,14 @@
 // }
 
 // console.log(narcissistic(153));
+
+// function abbrevName(name) {
+//   let newVar = name.split(" ");
+//   if (newVar.length > 1) {
+//     return `${newVar[0][0].toUpperCase()}.${newVar[1][0].toUpperCase()}`;
+//   } else {
+//     return name.toUpperCase();
+//   }
+// }
+
+// console.log(abbrevName("f.c"));

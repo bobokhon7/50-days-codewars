@@ -1229,7 +1229,7 @@ function divisors(integer) {
 
 ---
 
-<details><summary><b>Day 19</b></summary>
+<details><summary><b>Day 19 (1)</b></summary>
 
 #### Does my number look big in this?
 
@@ -1291,6 +1291,65 @@ function narcissistic(value) {
       return p + Math.pow(c, ("" + value).length);
     }, 0) == value
   );
+}
+```
+
+</details>
+
+</details>
+
+---
+
+<details><summary><b>Day 19 (2)</b></summary>
+
+#### Abbreviate a Two Word Name
+
+> 8 kyu
+
+###### Description:
+
+> Introduction
+> Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+> The output should be two capital letters with a dot separating them.
+
+> It should look like this:
+
+> For example, take 153 (3 digits), which is narcisstic:
+
+```javascript
+  Sam Harris => S.H
+
+patrick feeney => P.F
+```
+
+```javascript
+function abbrevName(name) {
+  // code away
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function abbrevName(name) {
+  let newVar = name.split(" ");
+  if (newVar.length > 1) {
+    return `${newVar[0][0].toUpperCase()}.${newVar[1][0].toUpperCase()}`;
+  } else {
+    return name.toUpperCase();
+  }
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function abbrevName(name) {
+  var nameArray = name.split(" ");
+  return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
 }
 ```
 
