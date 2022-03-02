@@ -370,3 +370,17 @@
 // }
 
 // console.log(divisors(15));
+
+// function narcissistic(value) {
+//   let newValue = value.toString().split("").map(Number);
+//   let newArr = [];
+
+//   for (let i = 0; i < newValue.length; i++) {
+//     newArr.push(Math.pow(newValue[i], newValue.length));
+//   }
+
+//   let sumArr = newArr.reduce((a, b) => a + b);
+//   return sumArr === value ? true : false;
+// }
+
+// console.log(narcissistic(153));
