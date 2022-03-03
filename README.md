@@ -1358,3 +1358,181 @@ function abbrevName(name) {
 </details>
 
 ---
+
+<details><summary><b>Day 20 (1)</b></summary>
+
+#### Difference of Volumes of Cuboids
+
+> 8 kyu
+
+###### Description:
+
+> Introduction
+> In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger.
+
+> For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
+
+> Your function will be tested with pre-made examples as well as random ones.
+
+```javascript
+function findDifference(a, b) {
+  //loading...
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function findDifference(a, b) {
+  let new1 = a.reduce((a, b) => a * b);
+  let new2 = b.reduce((a, b) => a * b);
+
+  if (new1 > new2) {
+    return new1 - new2;
+  } else {
+    return new2 - new1;
+  }
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function find_difference(a, b) {
+  return Math.abs(a[0] * a[1] * a[2] - b[0] * b[1] * b[2]);
+}
+```
+
+</details>
+
+</details>
+
+---
+
+<details><summary><b>Day 20 (2)</b></summary>
+
+#### Find Maximum and Minimum Values of a List
+
+> 8 kyu
+
+###### Description:
+
+> Introduction
+> Your task is to make two functions (max and min, or maximum and minimum, etc., depending on the language) that receive a list of integers as input and return, respectively, the largest and lowest number in that list.
+
+> Examples (Input -> Output)
+
+```javascript
+* [4,6,2,1,9,63,-134,566]         -> max = 566, min = -134
+* [-52, 56, 30, 29, -54, 0, -110] -> min = -110, max = 56
+* [42, 54, 65, 87, 0]             -> min = 0, max = 87
+* [5]                             -> min = 5, max = 5
+```
+
+```javascript
+var min = function (list) {
+  return list[0];
+};
+
+var max = function (list) {
+  return list[0];
+};
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+var min = function (list) {
+  return list.sort((a, b) => a - b)[0];
+};
+
+var max = function (list) {
+  return list.sort((a, b) => a - b)[list.length - 1];
+};
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+const min = (list) => Math.min(...list);
+const max = (list) => Math.max(...list);
+```
+
+</details>
+
+</details>
+
+---
+
+<details><summary><b>Day 20 (3)</b></summary>
+
+#### Don't give me five!
+
+> 7 kyu
+
+###### Description:
+
+> Introduction
+> In this kata you get the start number and the end number of a region and should return the count of all numbers except numbers with a 5 in it. The start and the end number are both inclusive!
+
+> Examples (Input -> Output)
+
+```javascript
+1,9 -> 1,2,3,4,6,7,8,9 -> Result 8
+4,17 -> 4,6,7,8,9,10,11,12,13,14,16,17 -> Result 12  -> min = 5, max = 5
+```
+
+> The result may contain fives. ;-)
+> The start number will always be smaller than the end number. Both numbers can be also negative!
+
+> I'm very curious for your solutions and the way you solve it. Maybe someone of you will find an easy pure mathematics solution.
+
+> Have fun coding it and please don't forget to vote and rank this kata! :-)
+
+> I have also created other katas. Take a look if you enjoyed this kata!
+
+```javascript
+function dontGiveMeFive(start, end) {
+  return 0;
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function dontGiveMeFive(start, end) {
+  let newArr = [];
+
+  for (let i = start; i <= end; i++) {
+    newArr.push(`${i}`);
+  }
+
+  return newArr.length - newArr.filter((element) => element.includes(5)).length;
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function dontGiveMeFive(start, end) {
+  let count = 0;
+  for (let i = start; i <= end; i++) {
+    if (!/5/.test(i)) {
+      count++;
+    }
+  }
+  return count;
+}
+```
+
+</details>
+
+</details>
+
+---

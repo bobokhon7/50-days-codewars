@@ -395,3 +395,38 @@
 // }
 
 // console.log(abbrevName("f.c"));
+
+// function findDifference(a, b) {
+//   let new1 = a.reduce((a, b) => a * b);
+//   let new2 = b.reduce((a, b) => a * b);
+
+//   if (new1 > new2) {
+//     return new1 - new2;
+//   } else {
+//     return new2 - new1;
+//   }
+// }
+
+// console.log(findDifference([2, 2, 3], [5, 4, 1]));
+
+// var min = function (list) {
+//   return list.sort((a, b) => a - b)[0];
+// };
+
+// var max = function (list) {
+//   return list.sort((a, b) => a - b)[list.length - 1];
+// };
+
+// console.log(min([4, 6, 2, 1, 9, 63, -134, 566]), max([4, 6, 2, 1, 9, 63, -134, 566]));
+
+// function dontGiveMeFive(start, end) {
+//   let newArr = [];
+
+//   for (let i = start; i <= end; i++) {
+//     newArr.push(`${i}`);
+//   }
+
+//   return newArr.length - newArr.filter((element) => element.includes(5)).length;
+// }
+
+// console.log(dontGiveMeFive(4, 17));
