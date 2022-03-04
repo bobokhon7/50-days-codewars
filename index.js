@@ -430,3 +430,36 @@
 // }
 
 // console.log(dontGiveMeFive(4, 17));
+
+// function hoopCount(n) {
+//   if (n >= 10) {
+//     return "Great, now move on to tricks";
+//   } else {
+//     return "Keep at it until you get it";
+//   }
+// }
+
+// console.log(hoopCount(10));
+
+// function otherAngle(a, b) {
+//   return 180 - (a + b);
+// }
+
+// console.log(otherAngle(10, 20));
+// function SeriesSum(n) {
+//   let result = 0;
+//   let addThree = 1;
+
+//   for (let i = 0; i < n; i++) {
+//     if (i === 0) {
+//       result = 1;
+//     } else {
+//       addThree += 3;
+//       result = result + 1 / addThree;
+//     }
+//   }
+
+//   return result.toFixed(2);
+// }
+
+// console.log(SeriesSum(3));
