@@ -1652,3 +1652,121 @@ function SeriesSum(n) {
 </details>
 
 </details>
+
+<details><summary><b>Day 22</b></summary>
+
+#### How good are you really?
+
+> 8 kyu
+
+###### Description:
+
+> There was a test in your class and you passed it. Congratulations!
+> But you're an ambitious person. You want to know if you're better than the average student in your class.
+
+> You receive an array with your peers' test scores. Now calculate the average and compare your score!
+
+> Return True if you're better, else False!
+
+> Note:
+> Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array!
+
+```javascript
+function betterThanAverage(classPoints, yourPoints) {
+  // Your code here
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function betterThanAverage(classPoints, yourPoints) {
+  let sum = classPoints.reduce((a, b) => a + b) / classPoints.length;
+
+  if (yourPoints > sum) {
+    return true;
+  } else {
+    return false;
+  }
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function SeriesSum(n) {
+  for (var s = 0, i = 0; i < n; i++) {
+    s += 1 / (1 + i * 3);
+  }
+  return s.toFixed(2);
+}
+```
+
+</details>
+
+</details>
+
+---
+
+<details><summary><b>Day 23</b></summary>
+
+#### The highest profit wins!
+
+> 7 kyu
+
+###### Description:
+
+> Story
+> Ben has a very simple idea to make some profit: he buys something and sells it again. Of course, this wouldn't give him any profit at all if he was simply to buy and sell it at the same price. Instead, he's going to buy it for the lowest possible price and sell it at the highest.
+
+> Task
+> Write a function that returns both the minimum and maximum number of the given list/array.
+
+```javascript
+minMax([1, 2, 3, 4, 5]) == [1, 5];
+minMax([2334454, 5]) == [5, 2334454];
+minMax([1]) == [1, 1];
+```
+
+```javascript
+function minMax(arr) {
+  return [0, 0]; // fix me!
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function minMax(arr) {
+  if (arr.length > 2) {
+    let newArr = [];
+    let newVal = arr.sort((a, b) => a - b);
+    newArr.push(newVal[0]);
+    newArr.push(newVal[newVal.length - 1]);
+    return newArr;
+  } else if (arr.length > 1) {
+    return arr.sort((a, b) => a - b);
+  } else if (arr.length > 0) {
+    let newVal1 = arr;
+    let num = arr[0];
+    newVal1.push(num);
+    return newVal1;
+  }
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function minMax(arr) {
+  return [Math.min(...arr), Math.max(...arr)];
+}
+```
+
+</details>
+
+</details>

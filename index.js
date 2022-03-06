@@ -463,3 +463,115 @@
 // }
 
 // console.log(SeriesSum(3));
+
+// function greet(name, owner) {
+//   // let newVal = name.localeCompare(owner);
+//   if (name === owner) {
+//     return "Hello boss";
+//   } else {
+//     return "Hello guest";
+//   }
+// }
+
+// console.log(greet("Daniel", "greeg"));
+
+// function bmi(weight, height) {
+//   let newVal = weight / (height * height);
+
+//   if (newVal > 30) {
+//     return "Obese";
+//   } else if (newVal <= 30.0 && newVal > 25) {
+//     return "Overweight";
+//   } else if (newVal <= 25.0) {
+//     return "Normal";
+//   } else if (newVal <= 18.5) {
+//     return "Underweight";
+//   }
+// }
+
+// console.log(bmi(80, 1.8));
+
+// function sumMix(x) {
+//   let newArr = x.map(Number);
+
+//   return newArr.reduce((a, b) => a + b);
+// }
+
+// console.log(sumMix([9, 3, "7", "3"]));
+
+// function switchItUp(number) {
+//   let newArr = {
+//     0: "Zero",
+//     1: "One",
+//     2: "Two",
+//     3: "Three",
+//     4: "Four",
+//     5: "Five",
+//     6: "Six",
+//     7: "Seven",
+//     8: "Eight",
+//     9: "Nine",
+//   };
+//   return newArr[number];
+// }
+
+// console.log(switchItUp(5));
+
+// function solution(str) {
+//   return str.split("").reverse().join("");
+// }
+
+// console.log(solution("word"));
+
+// function isPrime(num) {
+//   // let newArr = [];
+//   for (let i = 2; i < num; i++) {
+//     console.log(i);
+//     if (num % i === 0) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+
+//   // return newArr;
+// }
+
+// console.log(isPrime(11));
+// function removeSmallest(numbers) {
+//   let min = Math.min.apply(null, numbers);
+//   return numbers.filter((minval) => minval != min);
+// }
+
+// console.log(removeSmallest([1, 2, 3, 4, 5]));
+
+// function betterThanAverage(classPoints, yourPoints) {
+//   let sum = classPoints.reduce((a, b) => a + b) / classPoints.length;
+
+//   if (yourPoints > sum) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(betterThanAverage([2, 3], 5));
+
+// function minMax(arr) {
+//   if (arr.length > 2) {
+//     let newArr = [];
+//     let newVal = arr.sort((a, b) => a - b);
+//     newArr.push(newVal[0]);
+//     newArr.push(newVal[newVal.length - 1]);
+//     return newArr;
+//   } else if (arr.length > 1) {
+//     return arr.sort((a, b) => a - b);
+//   } else if (arr.length > 0) {
+//     let newVal1 = arr;
+//     let num = arr[0];
+//     newVal1.push(num);
+//     return newVal1;
+//   }
+// }
+
+// console.log(minMax([2334454, 5]));
