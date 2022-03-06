@@ -1653,6 +1653,8 @@ function SeriesSum(n) {
 
 </details>
 
+---
+
 <details><summary><b>Day 22</b></summary>
 
 #### How good are you really?
