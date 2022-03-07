@@ -1782,7 +1782,7 @@ function minMax(arr) {
 
 ---
 
-#### <details><summary><b>Day 24</b></summary>
+<details><summary><b>Day 24</b></summary>
 
 #### Sum of Minimums!
 
