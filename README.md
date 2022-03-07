@@ -1780,6 +1780,8 @@ function minMax(arr) {
 
 </details>
 
+---
+
 #### <details><summary><b>Day 24</b></summary>
 
 #### Sum of Minimums!
