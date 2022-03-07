@@ -98,7 +98,9 @@ function openOrSenior(data) {
 
 ```javascript
 function openOrSenior(data) {
-  return data.map(([age, handicap]) => (age > 54 && handicap > 7 ? "Senior" : "Open"));
+  return data.map(([age, handicap]) =>
+    age > 54 && handicap > 7 ? "Senior" : "Open"
+  );
 }
 ```
 
@@ -748,7 +750,9 @@ function wave(str) {
 
   str.split("").forEach((char, index) => {
     if (/[a-z]/.test(char)) {
-      result.push(str.slice(0, index) + char.toUpperCase() + str.slice(index + 1));
+      result.push(
+        str.slice(0, index) + char.toUpperCase() + str.slice(index + 1)
+      );
     }
   });
 
@@ -864,7 +868,9 @@ function likes(names) {
   } else if (names.length === 3) {
     newStr = `${names[0]}, ${names[1]} and ${names[2]} like this`;
   } else if (names.length >= 4) {
-    newStr = `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
+    newStr = `${names[0]}, ${names[1]} and ${
+      names.length - 2
+    } others like this`;
   }
 
   return newStr;

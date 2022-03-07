@@ -134,9 +134,6 @@
 
 // console.log(getSum(1, 0));
 
-/////////////////////////////
-//Find the Oddd number from array
-////////////////////////////
 // function findOdd(arr) {
 //   for (let i = 0; i < arr.length; i++) {
 //     const count = arr.filter((value) => value === arr[i]).length;
@@ -151,184 +148,80 @@
 
 // console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
 
-// const stray = (nums) => nums.reduce((a, b) => a ^ b);
-// console.log(stray([3, 17, 17]));
+// function setAlarm(employed, vacation){
+// if(employed ===true && vacation === false){
+//   return true
+// }else{
+//   return false
+// }
+// }
 
-// let a = 4;
-// let b = 5;
-// console.log(a ^ b);
-// function even_or_odd(number) {
-//   if (number % 2 === 0) {
-//     return "Even";
-//   } else {
-//     return "Odd";
+// console.log(setAlarm(false,false));
+
+// function getDivisorsCnt(n){
+//   // todo
+//   let arr = [];
+//   let newArr = []
+//   for(let i=1; i<=n;  i++){
+//     arr.push(i)
 //   }
-// }
-
-// console.log(even_or_odd(2));
-
-// function remove(s) {
-//   return s.split("!").join("").concat("!");
-// }
-// console.log(remove("Hello World!"));
-
-// const areaOrPerimeter = function (a, b) {
-//   if (a === b) {
-//     return a * b;
-//   } else {
-//     return a + a + b + b;
-//   }
-// };
-
-// console.log(areaOrPerimeter(3, 3));
-
-// function likes(names) {
-//   let newStr = "";
-
-//   if (names.length === 0) {
-//     return "no one likes this";
-//   } else if (names.length === 1) {
-//     newStr = `${names[0]} likes this}`;
-//   } else if (names.length === 2) {
-//     newStr = `${names[0]} and ${names[1]} likes this`;
-//   } else if (names.length === 3) {
-//     newStr = `${names[0]}, ${names[1]} and ${names[2]} likes this`;
-//   } else if (names.length >= 4) {
-//     newStr = `${names[0]}, ${names[1]} and ${names.length - 2} others likes this`;
-//   }
-
-//   return newStr;
-// }
-
-// console.log(likes(["Peter", "Tony", "Dam", "Dam"]));
-// function createPhoneNumber(numbers) {
-//   let newStr = `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`;
-//   return newStr;
-// }
-
-// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
-
-// function updateLight(current) {
-//   if (current === "red") {
-//     return "green";
-//   } else if (current === "green") {
-//     return "yellow";
-//   } else {
-//     return "red";
-//   }
-// }
-
-// console.log(updateLight("green"));
-
-// function isTriangle(a, b, c) {
-//   if (a + b < c || b + c < a || c + a < b) {
-//     return false;
-//   } else {
-//     if (a <= 0 || b <= 0 || c <= 0) {
-//       return false;
-//     } else {
-//       return true;
+//    arr.filter((a) => {
+//     if(n%a===0){
+//       newArr.push(a)
 //     }
+//   })
+//   return newArr.length
+// }
+
+// console.log(getDivisorsCnt(5))
+
+// function noSpace(x){
+// let newStr = x.split(' ').join('')
+// return newStr
+
+// console.log(noSpace('wfwufy wiufgwif uwfgiw;oad ufwu'))
+
+// function lovefunc(flower1, flower2){
+//   if(flower1% 2 !== 0 && flower2 % 2 === 0){
+//     return true
+//   }else{
+//     return false
 //   }
 // }
 
-// console.log(isTriangle(7, 2, 2));
+// console.log(lovefunc(0,0))
 
-// function findNextSquare(sq) {
-//   var root1;
-//   var nextroot;
-//   if (Math.sqrt(sq) % 1 === 0) {
-//     root1 = Math.sqrt(sq);
-//     nextroot = root1 + 1;
+// function digital_root(n) {
+//   let newVal = n
+//     .toString()
+//     .split("")
+//     .map(Number)
+//     .reduce((a, b) => a + b)
+//   if (n < 10) {
+//     return n;
+
 //   } else {
-//     return -1;
-//   }
-//   return nextroot * nextroot;
-// }
 
-// console.log(findNextSquare(114));
-
-// function sortArray(array) {
-//   let newArr = [];
-//   for (let i = 0; i < array.length; i++) {
-//     let take = array[i].reduce((a,b))
-
-//   }
-// }
-
-// console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]));
-
-// function countBy(x, n) {
-//   let z = [];
-//   let newVal = x * n;
-
-//   for (let i = x; i <= newVal; i += x) {
-//     z.push(i);
+//       return  newVal
 //   }
 
-//   return z;
 // }
 
-// console.log(countBy(2, 5));
-// function findShort(s) {
-//   let arr = s.split(" ");
-//   let newArr = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     newArr.push(arr[i].length);
-//   }
-//   return newArr.sort((a, b) => a - b)[0];
-// }
+// console.log(digital_root(245));
 
-// console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
+function sumOfMinimums(arr) {
+  let newArr = 0;
+  for (let i = 0; i < arr.length; i++) {
+    // newArr += Math.min(...arr[i]);
+    console.log(Math.min(...arr[i]));
+  }
+  return newArr;
+}
 
-// return masked string
-// function maskify(cc) {}
-
-// console.log(maskify("12347879797097979"));
-
-// function getAge(inputString) {
-//   // return correct age (int). Happy coding :)
-
-//   let newVal = inputString.split(" ");
-//   return Number(newVal[0]);
-// }
-
-// console.log(getAge("1 year old"));
-// function removeChar(str) {
-//   let newValue = str.split("");
-//   newValue.shift();
-//   newValue.pop();
-//   return newValue.join("");
-// }
-
-// console.log(removeChar("eloquent"));
-
-// function index(array, n) {
-//   if (array.length - 1 < n) {
-//     return -1;
-//   } else {
-//     let newArr = array[n];
-//     return Math.pow(newArr, n);
-//   }
-// }
-
-// console.log(index([1, 2, 3, 4], 4));
-
-// function isPangram(string) {
-//   let newValue = string.fromCharCode(65);
-//   return newValue;
-// }
-
-// console.log(isPangram("The quick brown fox jumps over the lazy dog."));
-
-// var countSheep = function (num) {
-//   let newArr = [];
-
-//   for (let i = 1; i <= num; i++) {
-//     newArr.push(i + " sheep...");
-//   }
-
-//   return newArr.join("");
-// };
-
-// console.log(countSheep(3));
+console.log(
+  sumOfMinimums([
+    [7, 9, 8, 6, 2],
+    [6, 3, 5, 4, 3],
+    [5, 8, 7, 4, 5],
+  ])
+);
