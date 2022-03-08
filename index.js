@@ -225,3 +225,54 @@
 //     [5, 8, 7, 4, 5],
 //   ])
 // );
+
+// function findUniq(num) {
+//   let val = num[0];
+//   let sort1 = [];
+//   let sort2 = [];
+//   num.filter((a) => {
+//     if (a === val) {
+//       sort1.push(a);
+//     } else {
+//       sort2.push(a);
+//     }
+//   });
+
+//   if (sort1.length > sort2.length) {
+//     return sort2[0];
+//   } else {
+//     return sort1[0];
+//   }
+// }
+
+// console.log(findUniq([3, 1, 1]));
+
+// const areaOrPerimeter = function (l, w) {
+//   if (l === w) {
+//     return l * w;
+//   } else {
+//     return (l + w) * 2;
+//   }
+// };
+
+// console.log(areaOrPerimeter(3, 3));
+
+// function countDevelopers(list) {
+//   let newArr = [];
+//   list.map((a) => {
+//     if (a.continent == "Europe" && a.language == "JavaScript") {
+//       newArr.push(a);
+//     }
+//   });
+
+//   return newArr.length === 0 ? 0 : newArr.length;
+// }
+
+// console.log(
+//   countDevelopers([
+//     { firstName: "Noah", lastName: "M.", country: "Switzerland", continent: "Europe", age: 19, language: "JavaScript" },
+//     { firstName: "Maia", lastName: "S.", country: "Tahiti", continent: "Oceania", age: 28, language: "JavaScript" },
+//     { firstName: "Shufen", lastName: "L.", country: "Taiwan", continent: "Asia", age: 35, language: "HTML" },
+//     { firstName: "Sumayah", lastName: "M.", country: "Tajikistan", continent: "Asia", age: 30, language: "CSS" },
+//   ])
+// );

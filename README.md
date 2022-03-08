@@ -98,9 +98,7 @@ function openOrSenior(data) {
 
 ```javascript
 function openOrSenior(data) {
-  return data.map(([age, handicap]) =>
-    age > 54 && handicap > 7 ? "Senior" : "Open"
-  );
+  return data.map(([age, handicap]) => (age > 54 && handicap > 7 ? "Senior" : "Open"));
 }
 ```
 
@@ -750,9 +748,7 @@ function wave(str) {
 
   str.split("").forEach((char, index) => {
     if (/[a-z]/.test(char)) {
-      result.push(
-        str.slice(0, index) + char.toUpperCase() + str.slice(index + 1)
-      );
+      result.push(str.slice(0, index) + char.toUpperCase() + str.slice(index + 1));
     }
   });
 
@@ -868,9 +864,7 @@ function likes(names) {
   } else if (names.length === 3) {
     newStr = `${names[0]}, ${names[1]} and ${names[2]} like this`;
   } else if (names.length >= 4) {
-    newStr = `${names[0]}, ${names[1]} and ${
-      names.length - 2
-    } others like this`;
+    newStr = `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
   }
 
   return newStr;
@@ -1224,8 +1218,7 @@ function divisors(integer) {
 ```javascript
 function divisors(integer) {
   var res = [];
-  for (var i = 2; i <= Math.floor(integer / 2); ++i)
-    if (integer % i == 0) res.push(i);
+  for (var i = 2; i <= Math.floor(integer / 2); ++i) if (integer % i == 0) res.push(i);
   return res.length ? res : integer + " is prime";
 }
 ```
@@ -1830,6 +1823,75 @@ function sumOfMinimums(arr) {
 ```javascript
 function sumOfMinimums(arr) {
   return arr.reduce((p, c) => p + Math.min(...c), 0);
+}
+```
+
+</details>
+
+</details>
+
+---
+
+<details><summary><b>Day 25</b></summary>
+
+#### Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe
+
+> 7 kyu
+
+###### Description:
+
+> You will be given an array of objects (hashes in ruby) representing data about developers who have signed up to attend the coding meetup that you are organising for the first time.
+
+> Your task is to return the number of JavaScript developers coming from Europe.
+
+> For example, given the following list:
+
+```javascript
+var list1 = [
+  { firstName: "Noah", lastName: "M.", country: "Switzerland", continent: "Europe", age: 19, language: "JavaScript" },
+  { firstName: "Maia", lastName: "S.", country: "Tahiti", continent: "Oceania", age: 28, language: "JavaScript" },
+  { firstName: "Shufen", lastName: "L.", country: "Taiwan", continent: "Asia", age: 35, language: "HTML" },
+  { firstName: "Sumayah", lastName: "M.", country: "Tajikistan", continent: "Asia", age: 30, language: "CSS" },
+];
+```
+
+> your function should return number 1.
+
+> If, there are no JavaScript developers from Europe then your function should return 0.
+
+> Notes:
+
+> The format of the strings will always be Europe and JavaScript.
+> All data will always be valid and uniform as in the example above.
+
+```javascript
+function countDevelopers(list) {
+  // your awesome code here :)
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function countDevelopers(list) {
+  let newArr = [];
+  list.map((a) => {
+    if (a.continent == "Europe" && a.language == "JavaScript") {
+      newArr.push(a);
+    }
+  });
+
+  return newArr.length === 0 ? 0 : newArr.length;
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function countDevelopers(list) {
+  return list.filter((x) => x.continent == "Europe" && x.language == "JavaScript").length;
 }
 ```
 
