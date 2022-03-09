@@ -276,3 +276,10 @@
 //     { firstName: "Sumayah", lastName: "M.", country: "Tajikistan", continent: "Asia", age: 30, language: "CSS" },
 //   ])
 // );
+
+// function isDivisible(n, x, y) {
+//   let newVal = n % x;
+//   return newVal === y ? true : false;
+// }
+
+// console.log(isDivisible(48, 3, 4));
