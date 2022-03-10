@@ -283,3 +283,9 @@
 // }
 
 // console.log(isDivisible(48, 3, 4));
+
+function sum(...val) {
+  return val.reduce((a, b) => a + b);
+}
+
+console.log(sum(1, 2, 3));

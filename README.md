@@ -1945,3 +1945,55 @@ function isDivisible(n, x, y) {
 </details>
 
 </details>
+
+---
+
+<details><summary><b>Day 27</b></summary>
+
+#### Sum of all arguments
+
+> 7 kyu
+
+###### Description:
+
+> Write a function that finds the sum of all its arguments.
+
+> For example, given the following list:
+
+```javascript
+sum(1, 2, 3); // => 6
+sum(8, 2); // => 10
+sum(1, 2, 3, 4, 5); // => 15
+```
+
+```javascript
+function sum() {
+  //code here
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function sum(...val) {
+  return val.reduce((a, b) => a + b);
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function sum() {
+  var sum = 0;
+  for (var i = 0; i < arguments.length; i++) {
+    sum += arguments[i];
+  }
+  return sum;
+}
+```
+
+</details>
+
+</details>
