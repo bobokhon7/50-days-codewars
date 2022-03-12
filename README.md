@@ -98,7 +98,9 @@ function openOrSenior(data) {
 
 ```javascript
 function openOrSenior(data) {
-  return data.map(([age, handicap]) => (age > 54 && handicap > 7 ? "Senior" : "Open"));
+  return data.map(([age, handicap]) =>
+    age > 54 && handicap > 7 ? "Senior" : "Open"
+  );
 }
 ```
 
@@ -748,7 +750,9 @@ function wave(str) {
 
   str.split("").forEach((char, index) => {
     if (/[a-z]/.test(char)) {
-      result.push(str.slice(0, index) + char.toUpperCase() + str.slice(index + 1));
+      result.push(
+        str.slice(0, index) + char.toUpperCase() + str.slice(index + 1)
+      );
     }
   });
 
@@ -864,7 +868,9 @@ function likes(names) {
   } else if (names.length === 3) {
     newStr = `${names[0]}, ${names[1]} and ${names[2]} like this`;
   } else if (names.length >= 4) {
-    newStr = `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
+    newStr = `${names[0]}, ${names[1]} and ${
+      names.length - 2
+    } others like this`;
   }
 
   return newStr;
@@ -1218,7 +1224,8 @@ function divisors(integer) {
 ```javascript
 function divisors(integer) {
   var res = [];
-  for (var i = 2; i <= Math.floor(integer / 2); ++i) if (integer % i == 0) res.push(i);
+  for (var i = 2; i <= Math.floor(integer / 2); ++i)
+    if (integer % i == 0) res.push(i);
   return res.length ? res : integer + " is prime";
 }
 ```
@@ -1848,10 +1855,38 @@ function sumOfMinimums(arr) {
 
 ```javascript
 var list1 = [
-  { firstName: "Noah", lastName: "M.", country: "Switzerland", continent: "Europe", age: 19, language: "JavaScript" },
-  { firstName: "Maia", lastName: "S.", country: "Tahiti", continent: "Oceania", age: 28, language: "JavaScript" },
-  { firstName: "Shufen", lastName: "L.", country: "Taiwan", continent: "Asia", age: 35, language: "HTML" },
-  { firstName: "Sumayah", lastName: "M.", country: "Tajikistan", continent: "Asia", age: 30, language: "CSS" },
+  {
+    firstName: "Noah",
+    lastName: "M.",
+    country: "Switzerland",
+    continent: "Europe",
+    age: 19,
+    language: "JavaScript",
+  },
+  {
+    firstName: "Maia",
+    lastName: "S.",
+    country: "Tahiti",
+    continent: "Oceania",
+    age: 28,
+    language: "JavaScript",
+  },
+  {
+    firstName: "Shufen",
+    lastName: "L.",
+    country: "Taiwan",
+    continent: "Asia",
+    age: 35,
+    language: "HTML",
+  },
+  {
+    firstName: "Sumayah",
+    lastName: "M.",
+    country: "Tajikistan",
+    continent: "Asia",
+    age: 30,
+    language: "CSS",
+  },
 ];
 ```
 
@@ -1891,7 +1926,9 @@ function countDevelopers(list) {
 
 ```javascript
 function countDevelopers(list) {
-  return list.filter((x) => x.continent == "Europe" && x.language == "JavaScript").length;
+  return list.filter(
+    (x) => x.continent == "Europe" && x.language == "JavaScript"
+  ).length;
 }
 ```
 
@@ -1991,6 +2028,109 @@ function sum() {
     sum += arguments[i];
   }
   return sum;
+}
+```
+
+</details>
+
+</details>
+
+---
+
+<details><summary><b>Day 28</b></summary>
+
+#### Four/Seven
+
+> 7 kyu
+
+###### Description:
+
+> Simple kata, simple rules: your function should accept the inputs 4 and 7. If 4 is entered, the function should return 7. If 7 is entered, the function should return 4. Anything else entered as input should return 0. There's only one catch, your function cannot include if statements, switch statements, or the ternary operator (or the eval function due to the fact that you can get around the if requirement using it).
+
+> There are some very simple ways of answering this problem, but I encourage you to try and be as creative as possible.
+
+> Good Luck!
+
+```javascript
+function fourSeven(n) {
+  // Your Code Here
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function fourSeven(n) {
+  while (n === 7) {
+    return 4;
+  }
+  while (n === 4) {
+    return 7;
+  }
+  return 0;
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function fourSeven(n) {
+  // Your Code Here
+  let results = {
+    7: 4,
+    4: 7,
+  };
+  return results[n] || 0;
+}
+```
+
+</details>
+
+</details>
+
+---
+
+<details><summary><b>Day 29</b></summary>
+
+#### USD => CNY
+
+> 8 kyu
+
+###### Description:
+
+> Create a function that converts US dollars (USD) to Chinese Yuan (CNY) . The input is the amount of USD as an integer, and the output should be a string that states the amount of Yuan followed by 'Chinese Yuan'
+
+> Examples (Input -> Output)
+
+```javascript
+* 15  -> '101.25 Chinese Yuan'
+* 465 -> '3138.75 Chinese Yuan'
+```
+
+> The conversion rate you should use is 6.75 CNY for every 1 USD. All numbers should be represented as a string with 2 decimal places. (e.g. "21.00" NOT "21.0" or "21")
+
+```javascript
+function usdcny(usd) {}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function usdcny(usd) {
+  let newVal = usd * 6.75;
+  return `${newVal.toFixed(2)} Chinese Yuan`;
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function usdcny(usd) {
+  return (usd * 6.75).toFixed(2) + " Chinese Yuan";
 }
 ```
 

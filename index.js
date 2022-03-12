@@ -289,3 +289,22 @@
 // }
 
 // console.log(sum(1, 2, 3));
+
+// function fourSeven(n) {
+//   while (n === 7) {
+//     return 4;
+//   }
+//   while (n === 4) {
+//     return 7;
+//   }
+//   return 0;
+// }
+
+// console.log(fourSeven(3));
+
+// function usdcny(usd) {
+//   let newVal = usd * 6.75;
+//   return `${newVal.toFixed(2)} Chinese Yuan`;
+// }
+
+// console.log(usdcny(15));
