@@ -2137,3 +2137,104 @@ function usdcny(usd) {
 </details>
 
 </details>
+
+---
+
+<details><summary><b>Day 30</b></summary>
+
+#### Moves in squared strings (I)
+
+> 7 kyu
+
+###### Description:
+
+> his kata is the first of a sequence of four about "Squared Strings".
+
+> You are given a string of n lines, each substring being n characters long: For example:
+
+> s = "abcd\nefgh\nijkl\nmnop"
+
+> We will study some transformations of this square of strings.
+
+> Vertical mirror: vert_mirror (or vertMirror or vert-mirror)
+
+```javascript
+vert_mirror(s) => "dcba\nhgfe\nlkji\nponm"
+```
+
+> Horizontal mirror: hor_mirror (or horMirror or hor-mirror)
+
+```javascript
+ hor_mirror(s) => "mnop\nijkl\nefgh\nabcd"
+
+```
+
+```javascript
+vertical mirror   |horizontal mirror
+abcd --> dcba     |abcd --> mnop
+efgh     hgfe     |efgh     ijkl
+ijkl     lkji     |ijkl     efgh
+mnop     ponm     |mnop     abcd
+
+```
+
+> Task:
+> Write these two functions
+> and
+
+> high-order function oper(fct, s) where
+
+> fct is the function of one variable f to apply to the string s (fct will be one of vertMirror, horMirror)
+
+```javascript
+function vertMirror(strng) {
+  // Your code
+}
+function horMirror(strng) {
+  // Your code
+}
+function oper(fct, s) {
+  // Your code
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function vertMirror(strng) {
+  return strng
+    .split("\n")
+    .map((item) => item.split("").reverse().join("").split(" "))
+    .join("\n");
+}
+function horMirror(strng) {
+  let reverse = strng.split("\n").reverse().join("\n");
+  return reverse;
+}
+function oper(fct, s) {
+  return fct(s);
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function vertMirror(strng) {
+  return strng
+    .split("\n")
+    .map((part) => part.split("").reverse().join(""))
+    .join("\n");
+}
+function horMirror(strng) {
+  return strng.split("\n").reverse().join("\n");
+}
+function oper(fct, s) {
+  return fct(s);
+}
+```
+
+</details>
+
+</details>

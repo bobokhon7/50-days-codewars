@@ -308,3 +308,15 @@
 // }
 
 // console.log(usdcny(15));
+
+function vertMirror(strng) {
+  return strng.split("").reverse().join("").split("").reverse();
+}
+function horMirror(strng) {
+  return strng.split("").reverse().join("");
+}
+function oper(fct, s) {
+  // Your code
+}
+
+console.log(vertMirror("abcd\nefgh\nijkl\nmnop"));
