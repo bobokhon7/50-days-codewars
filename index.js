@@ -320,3 +320,24 @@
 // }
 
 // console.log(vertMirror("abcd\nefgh\nijkl\nmnop"));
+
+// function evenAndOdd(num) {
+//   let odd = [];
+//   let even = [];
+
+//   let numArr = num.toString().split("").map(Number);
+
+//   for (let i = 0; i < numArr.length; i++) {
+//     if (numArr[i] % 2 === 0) {
+//       even.push(numArr[i]);
+//     } else {
+//       odd.push(numArr[i]);
+//     }
+//   }
+//   let newVal1 = Number(odd.join(""));
+//   let newVal2 = Number(even.join(""));
+
+//   return [newVal2, newVal1];
+// }
+
+// console.log(evenAndOdd(1260453));

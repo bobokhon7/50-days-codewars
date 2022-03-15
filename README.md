@@ -2238,3 +2238,78 @@ function oper(fct, s) {
 </details>
 
 </details>
+
+---
+
+<details><summary><b>Day 31</b></summary>
+
+#### Even and Odd !
+
+> 7 kyu
+
+###### Description:
+
+> Given a number N, can you fabricate the two numbers NE and NO such that NE is formed by even digits of N and NO is formed by odd digits of N? Examples:
+
+```javascript
+* 15  -> '101.25 Chinese Yuan'
+* 465 -> '3138.75 Chinese Yuan'
+```
+
+> The conversion rate you should use is 6.75 CNY for every 1 USD. All numbers should be represented as a string with 2 decimal places. (e.g. "21.00" NOT "21.0" or "21")
+
+```javascript
+input	NE	NO
+126453	264	153
+3012	2	31
+4628	4628	0
+```
+
+> 0 is considered as an even number.
+
+> In C and JavaScript you should return an array of two elements such as the first is NE and the second is NO.
+
+```javascript
+function evenAndOdd(num) {
+  // your code here
+  return [0, 0];
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function evenAndOdd(num) {
+  let odd = [];
+  let even = [];
+
+  let numArr = num.toString().split("").map(Number);
+
+  for (let i = 0; i < numArr.length; i++) {
+    if (numArr[i] % 2 === 0) {
+      even.push(numArr[i]);
+    } else {
+      odd.push(numArr[i]);
+    }
+  }
+  let newVal1 = Number(odd.join(""));
+  let newVal2 = Number(even.join(""));
+
+  return [newVal2, newVal1];
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function evenAndOdd(n) {
+  const f = (n, x) => +[...(n + "")].filter((e) => e % 2 === x).join``;
+  return [f(n, 0), f(n, 1)];
+}
+```
+
+</details>
+
+</details>
