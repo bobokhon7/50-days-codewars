@@ -2313,3 +2313,50 @@ function evenAndOdd(n) {
 </details>
 
 </details>
+
+---
+
+<details><summary><b>Day 32</b></summary>
+
+#### Semi-Optional
+
+> 8 kyu
+
+###### Description:
+
+> We have implemented a function wrap(value) that takes a value of arbitrary type and wraps it in a new JavaScript Object or Python Dict setting the 'value' key on the new Object or Dict to the passed-in value.
+
+> The conversion rate you should use is 6.75 CNY for every 1 USD. All numbers should be represented as a string with 2 decimal places. (e.g. "21.00" NOT "21.0" or "21")
+
+```javascript
+function wrap(value) {
+  return;
+  {
+    value: value;
+  }
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function wrap(value) {
+  return { value: value };
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function wrap(value) {
+  return {
+    value: value,
+  };
+}
+```
+
+</details>
+
+</details>

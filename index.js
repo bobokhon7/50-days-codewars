@@ -341,3 +341,19 @@
 // }
 
 // console.log(evenAndOdd(1260453));
+
+// function unusedDigits(val) {
+//   let numArr = val
+//     .join("")
+//     .split("")
+//     .map(Number)
+//     .sort((a, b) => a - b);
+//   let newArr1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+//   let newVal = newArr1.filter((obj) => {
+//     return numArr.indexOf(obj) == -1;
+//   });
+//   return `${newVal.join("")}`;
+// }
+
+// console.log(unusedDigits([2015, 8, 26]));
