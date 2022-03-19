@@ -357,3 +357,11 @@
 // }
 
 // console.log(unusedDigits([2015, 8, 26]));
+
+// function filter_list(l) {
+//   return l.filter((val) => {
+//     return typeof val !== "string";
+//   });
+// }
+
+// console.log(filter_list([1, 2, "1", "123", 123]));
