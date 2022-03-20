@@ -365,3 +365,26 @@
 // }
 
 // console.log(filter_list([1, 2, "1", "123", 123]));
+
+// function hydrate(s) {
+//   let newVal = s
+//     .split(" ")
+//     .filter((val) => {
+//       return val.length === 1;
+//     })
+//     .map(Number)
+//     .reduce((a, b) => a + b);
+
+//   return newVal === 1
+//     ? `${newVal} glass of water`
+//     : `${newVal} glasses of water`;
+// }
+
+// console.log(hydrate("1 shot"));
+
+function isPangram(str) {
+  var regex = /([a-z])(?!.*\1)/gi;
+  return str.match(regex).length === 26 ? true : false;
+}
+
+console.log(isPangram("The quick brown fox jumps over the lazy dog"));

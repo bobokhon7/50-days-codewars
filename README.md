@@ -2470,3 +2470,117 @@ function filter_list(l) {
 </details>
 
 </details>
+
+---
+
+<details><summary><b>Day 35(1)</b></summary>
+
+#### Responsible Drinking
+
+> 7 kyu
+
+###### Description:
+
+> Welcome to the Codewars Bar!
+> Codewars Bar recommends you drink 1 glass of water per standard drink so you're not hungover tomorrow morning.
+
+> Your fellow coders have bought you several drinks tonight in the form of a string. Return a string suggesting how many glasses of water you should drink to not be hungover.
+
+```javascript
+"1 beer"  -->  "1 glass of water"
+because you drank one standard drink
+
+"1 shot, 5 beers, 2 shots, 1 glass of wine, 1 beer"  -->  "10 glasses of water"
+because you drank ten standard drinks
+
+```
+
+```javascript
+function hydrate(s) {
+  // your code here
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function hydrate(s) {
+  let newVal = s
+    .split(" ")
+    .filter((val) => {
+      return val.length === 1;
+    })
+    .map(Number)
+    .reduce((a, b) => a + b);
+
+  return newVal === 1
+    ? `${newVal} glass of water`
+    : `${newVal} glasses of water`;
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function hydrate(s) {
+  let answer = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (parseInt(s[i]) > 0) {
+      answer += +s[i];
+    }
+  }
+  return answer > 1 ? `${answer} glasses of water`: '1 glass of water'
+
+```
+
+</details>
+
+</details>
+
+---
+
+<details><summary><b>Day 35(2)</b></summary>
+
+#### Detect Pangram
+
+> 6 kyu
+
+###### Description:
+
+> A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+
+> Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+
+```javascript
+function isPangam(str) {
+  // your code here
+}
+```
+
+<details><summary><b>My Answer</b></summary>
+
+```javascript
+function isPangram(str) {
+  var regex = /([a-z])(?!.*\1)/gi;
+  return str.match(regex).length === 26 ? true : false;
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function isPangram(string) {
+  string = string.toLowerCase();
+  return "abcdefghijklmnopqrstuvwxyz".split("").every(function (x) {
+    return string.indexOf(x) !== -1;
+  });
+}
+```
+
+</details>
+
+</details>
