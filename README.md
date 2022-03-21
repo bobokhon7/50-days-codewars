@@ -2584,3 +2584,54 @@ function isPangram(string) {
 </details>
 
 </details>
+
+---
+
+<details><summary><b>Day 36</b></summary>
+
+#### Convert string to camel case
+
+> 6 kyu
+
+###### Description:
+
+> Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
+
+```javascript
+function toCamelCase(str) {}
+```
+
+<details><summary><b>My Answer 😅</b></summary>
+
+```javascript
+// My answer almost is right but I could not finish all test (failed 😇)
+function toCamelCase(str) {
+  let newVal = str
+    .replace(/[_-]/g, " ")
+    .split(" ")
+    .map((val) => {
+      if (val[0] === toUpperCase()) {
+      }
+      return val[0].toUpperCase() + val.slice(1);
+    });
+
+  return str === "" ? "" : newVal.join("");
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function toCamelCase(str) {
+  var regExp = /[-_]\w/gi;
+  return str.replace(regExp, function (match) {
+    return match.charAt(1).toUpperCase();
+  });
+}
+```
+
+</details>
+
+</details>

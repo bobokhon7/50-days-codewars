@@ -382,9 +382,24 @@
 
 // console.log(hydrate("1 shot"));
 
-function isPangram(str) {
-  var regex = /([a-z])(?!.*\1)/gi;
-  return str.match(regex).length === 26 ? true : false;
-}
+// function isPangram(str) {
+//   var regex = /([a-z])(?!.*\1)/gi;
+//   return str.match(regex).length === 26 ? true : false;
+// }
 
-console.log(isPangram("The quick brown fox jumps over the lazy dog"));
+// console.log(isPangram("The quick brown fox jumps over the lazy dog"));
+
+// function toCamelCase(str) {
+//   let newVal = str
+//     .replace(/[_-]/g, " ")
+//     .split(" ")
+//     .map((val) => {
+//       if (val[0] === toUpperCase()){
+
+//       } return val[0].toUpperCase() + val.slice(1);
+//     });
+
+//   return str === "" ? "" : newVal.join("");
+// }
+
+// console.log(toCamelCase("the-stealth-warrior"));
