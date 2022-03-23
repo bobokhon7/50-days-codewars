@@ -403,3 +403,11 @@
 // }
 
 // console.log(toCamelCase("the-stealth-warrior"));
+
+// function spacify(str) {
+//   let val = str.split("");
+
+//   return val;
+// }
+
+// console.log(spacify("hell why"));

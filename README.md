@@ -2635,3 +2635,45 @@ function toCamelCase(str) {
 </details>
 
 </details>
+
+---
+
+<details><summary><b>Day 37</b></summary>
+
+#### CSpacify
+
+> 7 kyu
+
+###### Description:
+
+> Modify the spacify function so that it returns the given string with spaces inserted between each character.
+
+```javascript
+function spacify(str) {
+  // return
+}
+```
+
+<details><summary><b>My Answer </b></summary>
+
+```javascript
+function spacify(str) {
+  let val = str.split("").join(' )
+
+  return val;
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function spacify(str) {
+  return str.split("").join(" ");
+}
+```
+
+</details>
+
+</details>
