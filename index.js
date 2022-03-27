@@ -411,3 +411,21 @@
 // }
 
 // console.log(spacify("hell why"));
+
+// function processData(data) {
+//   let newArr = [];
+
+//   data.map((val) => {
+//     let value1 = val.reduce((a, b) => a - b);
+//     newArr.push(value1);
+//   });
+//   return newArr.reduce((a, b) => a * b);
+// }
+
+// console.log(
+//   processData([
+//     [2, 5],
+//     [3, 4],
+//     [8, 7],
+//   ])
+// );

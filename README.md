@@ -2677,3 +2677,71 @@ function spacify(str) {
 </details>
 
 </details>
+
+---
+
+<details><summary><b>Day 38</b></summary>
+
+#### Thinkful - List and Loop Drills: Lists of lists
+
+> 7 kyu
+
+###### Description:
+
+> You have a two-dimensional list in the following format:
+
+```javascript
+data = [
+  [2, 5],
+  [3, 4],
+  [8, 7],
+];
+```
+
+> Each sub-list contains two items, and each item in the sub-lists is an integer.
+
+> Write a function process_data()/processData() that processes each sub-list like so:
+
+```javascript
+[2, 5] --> 2 - 5 --> -3
+[3, 4] --> 3 - 4 --> -1
+[8, 7] --> 8 - 7 --> 1
+```
+
+> and then returns the product of all the processed sub-lists: -3 _ -1 _ 1 --> 3.
+
+> For input, you can trust that neither the main list nor the sublists will be empty.
+
+```javascript
+function processData(data) {
+  //your code here
+}
+```
+
+<details><summary><b>My Answer </b></summary>
+
+```javascript
+function processData(data) {
+  let newArr = [];
+
+  data.map((val) => {
+    let value1 = val.reduce((a, b) => a - b);
+    newArr.push(value1);
+  });
+  return newArr.reduce((a, b) => a * b);
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function processData(data) {
+  return data.reduce((acc, cur) => acc * (cur[0] - cur[1]), 1);
+}
+```
+
+</details>
+
+</details>
