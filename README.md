@@ -2819,8 +2819,9 @@ const rps = (p1, p2) => {
 ```
 
 </details>
-
 </details>
+
+---
 
 <details><summary><b>Day 40</b></summary>
 
