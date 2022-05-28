@@ -450,12 +450,12 @@
 
 // console.log(rps("paper", "paper"));
 
-function createPhoneNumber(numbers) {
-  let firstThreeNum = numbers.slice(0, 3).join("");
-  let secondThreeNum = numbers.slice(3, 6).join("");
-  let thirdFourNum = numbers.slice(6, 10).join("");
+// function createPhoneNumber(numbers) {
+//   let firstThreeNum = numbers.slice(0, 3).join("");
+//   let secondThreeNum = numbers.slice(3, 6).join("");
+//   let thirdFourNum = numbers.slice(6, 10).join("");
 
-  return `(${firstThreeNum}) ${secondThreeNum}-${thirdFourNum}`;
-}
+//   return `(${firstThreeNum}) ${secondThreeNum}-${thirdFourNum}`;
+// }
 
-console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
