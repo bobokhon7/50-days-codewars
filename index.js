@@ -459,3 +459,41 @@
 // }
 
 // console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+// function persistence(num) {
+//   if (num < 10) {
+//     return num;
+//   }
+
+// function nines(n) {
+//   let newArr = [];
+
+//   let ninesFunc = [];
+
+//   for (let i = 0; i <= n; i++) {
+//     newArr.push(i);
+//   }
+//   let newFun = newArr.join("").split("").map(Number);
+//   newFun.forEach((a) => {
+//     if (a === 9) {
+//       ninesFunc.push(a);
+//     }
+//   });
+
+//   return ninesFunc.length;
+// }
+
+// console.log(nines(1000));
+
+function isPrime(num) {
+  if (num < 2) return false;
+  const limit = Math.sqrt(num);
+  for (let i = 2; i <= limit; ++i) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(isPrime(-5));
