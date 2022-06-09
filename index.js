@@ -485,15 +485,61 @@
 
 // console.log(nines(1000));
 
-function isPrime(num) {
-  if (num < 2) return false;
-  const limit = Math.sqrt(num);
-  for (let i = 2; i <= limit; ++i) {
-    if (num % i === 0) {
-      return false;
-    }
-  }
-  return true;
-}
+// function isPrime(num) {
+//   // if (num < 2) return false;
+//   const limit = Math.sqrt(num);
+//   // for (let i = 2; i <= limit; ++i) {
+//   //   if (num % i === 0) {
+//   //     return false;
+//   //   }
+//   // }
+//   return limit;
+// }
 
-console.log(isPrime(-5));
+// console.log(isPrime(25));
+
+// function incrementString(strng) {
+//   var _num = "";
+//   var _alp = "";
+//   let newZero = [];
+//   let one = "1";
+
+//   for (var i = 0; i < strng.length; i++) {
+//     if (isNaN(strng[i])) {
+//       _alp += strng[i];
+//     } else {
+//       _num += strng[i];
+//     }
+//   }
+
+//   let pushZero = _num.split("").map(Number);
+//   pushZero.map((a) => {
+//     if (a === 0) {
+//       newZero.push(a);
+//     }
+//   });
+
+//   let checkZero = newZero.join("");
+
+//   let convertNumber = Number(_num);
+//   let addOne = ++convertNumber;
+//   let convertToString = addOne.toString();
+
+//   if (_num === "") {
+//     return _alp + one;
+//   } else {
+//     return _alp + checkZero + convertToString;
+//   }
+// }
+// console.log(incrementString("foobar000"));
+// function solution(str, ending) {
+//   return str.endsWith(ending);
+// }
+
+// console.log(solution("abc", "d"));
+
+function removeSmallest(numbers) {
+  let indexOfMin = numbers.indexOf(Math.min(...numbers));
+  return numbers.filter((a, b) => b !== indexOfMin);
+}
+console.log(removeSmallest([2, 1, 3, 4, 1, 5]));

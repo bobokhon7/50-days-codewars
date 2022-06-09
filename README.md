@@ -2939,3 +2939,102 @@ function isPrime(num) {
 </details>
 
 </details>
+
+---
+
+<details><summary><b>Day 42</b></summary>
+
+#### String ends with?
+
+> 7 kyu
+
+###### Description:
+
+> Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+
+> Examples:
+
+```javascript
+solution("abc", "bc"); // returns true
+solution("abc", "d"); // returns false
+```
+
+```javascript
+function solution(str, ending) {
+  // TODO: complete
+}
+```
+
+<details><summary><b>My Answer </b></summary>
+
+```javascript
+function solution(str, ending) {
+  return str.endsWith(ending);
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function solution(str, ending) {
+  return str.substr(-ending.length) == ending;
+}
+```
+
+</details>
+
+</details>
+
+---
+
+<details><summary><b>Day 43</b></summary>
+
+#### Remove the minimum
+
+> 7 kyu
+
+###### Description:
+
+> Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list.
+
+> Don't change the order of the elements that are left.
+
+> Examples:
+
+```javascript
+* Input: [1,2,3,4,5], output= [2,3,4,5]
+* Input: [5,3,2,1,4], output = [5,3,2,4]
+* Input: [2,2,1,2,1], output = [2,2,2,1]
+```
+
+```javascript
+function removeSmallest(numbers) {
+  throw "TODO: removeSmallest";
+}
+```
+
+<details><summary><b>My Answer </b></summary>
+
+```javascript
+function removeSmallest(numbers) {
+  let indexOfMin = numbers.indexOf(Math.min(...numbers)); //// find index of first min number
+  return numbers.filter((a, b) => b !== indexOfMin); ///then filter and remove from array first min numnber
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function removeSmallest(numbers) {
+  let indexOfMin = numbers.indexOf(Math.min(...numbers));
+  return numbers.filter((a, b) => b !== indexOfMin);
+}
+```
+
+</details>
+
+</details>
