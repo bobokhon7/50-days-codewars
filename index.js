@@ -538,8 +538,38 @@
 
 // console.log(solution("abc", "d"));
 
-function removeSmallest(numbers) {
-  let indexOfMin = numbers.indexOf(Math.min(...numbers));
-  return numbers.filter((a, b) => b !== indexOfMin);
-}
-console.log(removeSmallest([2, 1, 3, 4, 1, 5]));
+// function removeSmallest(numbers) {
+//   let indexOfMin = numbers.indexOf(Math.min(...numbers));
+//   return numbers.filter((a, b) => b !== indexOfMin);
+// }
+// console.log(removeSmallest([2, 1, 3, 4, 1, 5]));
+
+// function pipeFix(numbers) {
+//   if (numbers.length === 1) {
+//     return numbers;
+//   } else {
+//     let findLastDigit = numbers.pop();
+//     let findFisrtDigit = numbers.shift();
+//     let newArr = [];
+//     for (let i = findFisrtDigit; i <= findLastDigit; i++) {
+//       newArr.push(i);
+//     }
+//     return newArr;
+//   }
+// }
+
+// console.log(pipeFix([2]));
+
+// function hello(name) {
+//   if (name.length === "") {
+//     return "Hello, World!";
+//   } else {
+//     let makeLowerCase = name.toLowerCase();
+//     let makeFirsrUpperCase =
+//       makeLowerCase[0].toUpperCase() + makeLowerCase.slice(1);
+
+//     return `Hello, ${makeFirsrUpperCase}!`;
+//   }
+// }
+
+// console.log(hello("AAAAA"));

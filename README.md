@@ -3038,3 +3038,125 @@ function removeSmallest(numbers) {
 </details>
 
 </details>
+
+---
+
+<details><summary><b>Day 44</b></summary>
+
+#### Hello, Name or World!
+
+> 8 kyu
+
+###### Description:
+
+> Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+
+> Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
+
+> Examples:
+
+```javascript
+* With `name` = "john"  => return "Hello, John!"
+* With `name` = "aliCE" => return "Hello, Alice!"
+* With `name` not given
+  or `name` = ""        => return "Hello, World!"
+```
+
+```javascript
+function hello(name) {
+  return "";
+}
+```
+
+<details><summary><b>My Answer </b></summary>
+
+```javascript
+function hello(name) {
+  if (typeof name === "undefined" || name.length === 0) {
+    return "Hello, World!";
+  } else {
+    let makeLowerCase = name.toLowerCase();
+    let makeFirsrUpperCase =
+      makeLowerCase[0].toUpperCase() + makeLowerCase.slice(1);
+
+    return `Hello, ${makeFirsrUpperCase}!`;
+  }
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+const hello = (s) =>
+  `Hello, ${s ? s[0].toUpperCase() + s.slice(1).toLowerCase() : "World"}!`;
+```
+
+</details>
+
+</details>
+
+---
+
+<details><summary><b>Day 45</b></summary>
+
+#### Lario and Muigi Pipe Problem
+
+> 8 kyu
+
+###### Description:
+
+> Given the a list of numbers, return a fixed list so that the values increment by 1 for each index from the minimum value up to the
+> maximum value (both included).
+
+> Examples:
+
+```javascript
+Input: 1,3,5,6,7,8 Output: 1,2,3,4,5,6,7,8
+```
+
+```javascript
+function pipeFix(numbers) {
+  ///// code here
+}
+```
+
+<details><summary><b>My Answer </b></summary>
+
+```javascript
+function pipeFix(numbers) {
+  if (numbers.length === 1) {
+    return numbers;
+  } else {
+    let findLastDigit = numbers.pop();
+    let findFisrtDigit = numbers.shift();
+    let newArr = [];
+    for (let i = findFisrtDigit; i <= findLastDigit; i++) {
+      newArr.push(i);
+    }
+    return newArr;
+  }
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function pipeFix(numbers) {
+  var first = numbers[0];
+  var last = numbers[numbers.length - 1];
+
+  var arr = [];
+  for (var i = first; i <= last; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
+```
+
+</details>
+
+</details>
