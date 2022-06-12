@@ -605,56 +605,110 @@
 //   countSheeps([true, true, true, false, true, true, false, false, true, true])
 // );
 
-function comp(array1, array2) {
-  let result = false;
-  if (array1 && array2) {
-    if (array1.length === 0 && array2.length === 0) {
-      result = true;
-    } else {
-      let newArr = [];
-      array1.map((a) => {
-        let newNum = a * a;
-        newArr.push(newNum);
-      });
-      let firstArr = newArr.sort((a, b) => a - b);
-      let secondArr = array2.sort((a, b) => a - b);
-      for (let i = 0; i < firstArr.length; i++) {
-        if (firstArr.indexOf(secondArr[i]) !== firstArr.indexOf(firstArr[i])) {
-          result = false;
-          break;
-        }
-        result = true;
-      }
-    }
-    return result;
-  }
-}
+// function comp(array1, array2) {
+//   let result = false;
+//   if (array1 && array2) {
+//     if (array1.length === 0 && array2.length === 0) {
+//       result = true;
+//     } else {
+//       let newArr = [];
+//       array1.map((a) => {
+//         let newNum = a * a;
+//         newArr.push(newNum);
+//       });
+//       let firstArr = newArr.sort((a, b) => a - b);
+//       let secondArr = array2.sort((a, b) => a - b);
+//       for (let i = 0; i < firstArr.length; i++) {
+//         if (firstArr.indexOf(secondArr[i]) !== firstArr.indexOf(firstArr[i])) {
+//           result = false;
+//           break;
+//         }
+//         result = true;
+//       }
+//     }
+//     return result;
+//   }
+// }
 
-console.log(
-  comp(
-    [121, 144, 19, 161, 19, 144, 19, 11],
-    [121, 14641, 20736, 361, 25921, 361, 20736, 361]
-  )
-);
+// console.log(
+//   comp(
+//     [121, 144, 19, 161, 19, 144, 19, 11],
+//     [121, 14641, 20736, 361, 25921, 361, 20736, 361]
+//   )
+// );
 
-function comp(array1, array2) {
-  let result = false;
+// function comp(array1, array2) {
+//   let result = false;
 
-  if (array1 && array2) {
-    if (array1.length === 0 && array2.length === 0) {
-      result = true;
-    } else {
-      const squareRoots = array2.map((num) => Math.sqrt(num));
-      array1.sort((a, b) => a - b);
-      squareRoots.sort((a, b) => a - b);
-      for (let i = 0; i < squareRoots.length; i++) {
-        if (array1.indexOf(squareRoots[i]) !== array1.indexOf(array1[i])) {
-          result = false;
-          break;
-        }
-        result = true;
-      }
-    }
-  }
-  return result;
-}
+//   if (array1 && array2) {
+//     if (array1.length === 0 && array2.length === 0) {
+//       result = true;
+//     } else {
+//       const squareRoots = array2.map((num) => Math.sqrt(num));
+//       array1.sort((a, b) => a - b);
+//       squareRoots.sort((a, b) => a - b);
+//       for (let i = 0; i < squareRoots.length; i++) {
+//         if (array1.indexOf(squareRoots[i]) !== array1.indexOf(array1[i])) {
+//           result = false;
+//           break;
+//         }
+//         result = true;
+//       }
+//     }
+//   }
+//   return result;
+// }
+
+// const quarterOf = (month) => {
+//   if (month < 4) {
+//     return 1;
+//   } else if (month >= 4 && month < 7) {
+//     return 2;
+//   } else if (month >= 7 && month < 10) {
+//     return 3;
+//   } else {
+//     return 4;
+//   }
+// };
+
+// console.log(quarterOf(3));
+
+// function XO(str) {
+//   let newXArr = [];
+//   let newOArr = [];
+//   let withoutXO = [];
+//   let toArray = str.toLowerCase().split("");
+//   toArray.filter((a) => {
+//     if (a === "o") {
+//       newOArr.push(a);
+//     } else if (a === "x") {
+//       newXArr.push(a);
+//     } else {
+//       withoutXO.push(a);
+//     }
+//   });
+//   if (newOArr.length === newXArr.length) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(XO("xwox"));
+// function getGrade(s1, s2, s3) {
+//   let sumGrade = (s1 + s2 + s3) / 3;
+
+//   if (sumGrade >= 90 && sumGrade <= 100) {
+//     return "A";
+//   } else if (sumGrade >= 80 && sumGrade < 90) {
+//     return "B";
+//   } else if (sumGrade >= 70 && sumGrade < 80) {
+//     return "C";
+//   } else if (sumGrade >= 60 && sumGrade < 70) {
+//     return "D";
+//   } else {
+//     return "F";
+//   }
+// }
+
+// console.log(getGrade(20, 60, 95));
