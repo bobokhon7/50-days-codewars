@@ -573,3 +573,88 @@
 // }
 
 // console.log(hello("AAAAA"));
+// write the function isAnagram
+// var isAnagram = function (test, original) {
+//   let firstWord = test.toLowerCase().split("").sort().join("");
+//   let secondWord = original.toLowerCase().split("").sort().join("");
+//   let compare = firstWord.localeCompare(secondWord);
+
+//   if (compare === 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+// console.log(isAnagram("Buckethead", "DeathCubeK"));
+
+// function countSheeps(arrayOfSheep) {
+//   // TODO May the force be with you
+//   let countSheep = [];
+//   if (arrayOfSheep.length !== 0) {
+//     arrayOfSheep.filter((item) => {
+//       if (item === true) {
+//         countSheep.push(item);
+//       }
+//     });
+//     return countSheep.length;
+//   }
+// }
+
+// console.log(
+//   countSheeps([true, true, true, false, true, true, false, false, true, true])
+// );
+
+function comp(array1, array2) {
+  let result = false;
+  if (array1 && array2) {
+    if (array1.length === 0 && array2.length === 0) {
+      result = true;
+    } else {
+      let newArr = [];
+      array1.map((a) => {
+        let newNum = a * a;
+        newArr.push(newNum);
+      });
+      let firstArr = newArr.sort((a, b) => a - b);
+      let secondArr = array2.sort((a, b) => a - b);
+      for (let i = 0; i < firstArr.length; i++) {
+        if (firstArr.indexOf(secondArr[i]) !== firstArr.indexOf(firstArr[i])) {
+          result = false;
+          break;
+        }
+        result = true;
+      }
+    }
+    return result;
+  }
+}
+
+console.log(
+  comp(
+    [121, 144, 19, 161, 19, 144, 19, 11],
+    [121, 14641, 20736, 361, 25921, 361, 20736, 361]
+  )
+);
+
+function comp(array1, array2) {
+  let result = false;
+
+  if (array1 && array2) {
+    if (array1.length === 0 && array2.length === 0) {
+      result = true;
+    } else {
+      const squareRoots = array2.map((num) => Math.sqrt(num));
+      array1.sort((a, b) => a - b);
+      squareRoots.sort((a, b) => a - b);
+      for (let i = 0; i < squareRoots.length; i++) {
+        if (array1.indexOf(squareRoots[i]) !== array1.indexOf(array1[i])) {
+          result = false;
+          break;
+        }
+        result = true;
+      }
+    }
+  }
+  return result;
+}

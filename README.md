@@ -3160,3 +3160,147 @@ function pipeFix(numbers) {
 </details>
 
 </details>
+
+---
+
+<details><summary><b>Day 46</b></summary>
+
+#### Anagram Detection
+
+> 7 kyu
+
+###### Description:
+
+> Note: anagrams are case insensitive
+
+> Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
+> Examples:
+
+```javascript
+"foefet" is an anagram of "toffee"
+
+"Buckethead" is an anagram of "DeathCubeK"
+```
+
+```javascript
+// write the function isAnagram
+var isAnagram = function (test, original) {};
+```
+
+<details><summary><b>My Answer </b></summary>
+
+```javascript
+function pipeFix(numbers) {
+var isAnagram = function (test, original) {
+  let firstWord = test.toLowerCase().split("").sort().join("");
+  let secondWord = original.toLowerCase().split("").sort().join("");
+  let compare = firstWord.localeCompare(secondWord);
+
+  if (compare === 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+// write the function isAnagram
+var isAnagram = function (test, original) {
+  var t = test.toLowerCase().split("").sort().join("");
+  var o = original.toLowerCase().split("").sort().join("");
+  return t == o ? true : false;
+};
+```
+
+</details>
+
+</details>
+
+---
+
+<details><summary><b>Day 47</b></summary>
+
+#### Are they the "same"?
+
+> 6 kyu
+
+###### Description:
+
+> Given two arrays a and b write a function comp(a, b) (orcompSame(a, b)) that checks whether the two arrays have the "same" elements, with the
+> same > multiplicities (the multiplicity of a member is the number of times it appears). "Same" means, here, that the elements in b are the
+> elements >
+> in a squared, regardless of the order.
+
+> Examples:
+
+```javascript
+a = [121, 144, 19, 161, 19, 144, 19, 11];
+b = [121, 14641, 20736, 361, 25921, 361, 20736, 361];
+///
+a = [121, 144, 19, 161, 19, 144, 19, 11];
+b = [
+  11 * 11,
+  121 * 121,
+  144 * 144,
+  19 * 19,
+  161 * 161,
+  19 * 19,
+  144 * 144,
+  19 * 19,
+];
+```
+
+```javascript
+function comp(array1, array2) {
+  //your code here
+}
+```
+
+<details><summary><b>My Answer </b></summary>
+
+```javascript
+function comp(array1, array2) {
+  let result = false;
+
+  if (array1 && array2) {
+    if (array1.length === 0 && array2.length === 0) {
+      result = true;
+    } else {
+      const squareRoots = array2.map((num) => Math.sqrt(num));
+      array1.sort((a, b) => a - b);
+      squareRoots.sort((a, b) => a - b);
+      for (let i = 0; i < squareRoots.length; i++) {
+        if (array1.indexOf(squareRoots[i]) !== array1.indexOf(array1[i])) {
+          result = false;
+          break;
+        }
+        result = true;
+      }
+    }
+  }
+  return result;
+}
+```
+
+</details>
+
+<details><summary><b>Best Answer </b></summary>
+
+```javascript
+function comp(array1, array2) {
+  if (array1 == null || array2 == null) return false;
+  array1.sort((a, b) => a - b);
+  array2.sort((a, b) => a - b);
+  return array1.map((v) => v * v).every((v, i) => v == array2[i]);
+}
+```
+
+</details>
+
+</details>
