@@ -712,3 +712,16 @@
 // }
 
 // console.log(getGrade(20, 60, 95));
+
+// function order(words) {
+//   return words;
+// }
+// function order(words) {
+//   return words
+//     .split(" ")
+//     .sort(function (a, b) {
+//       return a.match(/\d/) - b.match(/\d/);
+//     })
+//     .join(" ");
+// }
+// console.log(order("is2 Thi1s T4est 3a"));
