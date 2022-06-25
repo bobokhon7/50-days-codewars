@@ -1,6 +1,6 @@
 <div align="center">
   <img height="60" src="./assets/codewars_button_icon.png">
-  <h1>30 Days Codewars</h1>
+  <h1>50 Days Codewars</h1>
 
 ---
 
